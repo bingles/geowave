@@ -52,12 +52,12 @@
               aria-expanded="false">Documentation</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
               <a class="dropdown-item" href="#">Installation Guide</a>
-              <a class="dropdown-item" href="#">Quickstart</a>
-              <a class="dropdown-item" href="#">User Guide</a>
-              <a class="dropdown-item" href="#">Developer Guide</a>
-              <a class="dropdown-item" href="#">Command Line Interface</a>
-              <a class="dropdown-item" href="#">Javadocs</a>
-              <a class="dropdown-item" href="#">Python Bindings</a>
+              <a class="dropdown-item" href="quickstart.html">Quickstart</a>
+              <a class="dropdown-item" href="userguide.html">User Guide</a>
+              <a class="dropdown-item" href="devguide.html">Developer Guide</a>
+              <a class="dropdown-item" href="commands.html">Command Line Interface</a>
+              <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
+              <a class="dropdown-item" href="pydocs/index.html">Python Bindings</a>
               <a class="dropdown-item" href="#">Support</a>
             </div>
           </li>
@@ -65,7 +65,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Support</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="#">GitHub Issues</a>
+              <a class="dropdown-item" href="https://github.com/locationtech/geowave/issues">GitHub Issues</a>
               <a class="dropdown-item" href="#">Mailing list</a>
             </div>
           </li>
@@ -74,7 +74,7 @@
               aria-expanded="false">Version</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
               <a class="dropdown-item" href="#">Latest Snapshot</a>
-              <a class="dropdown-item" href="#">Latest Release</a>
+              <a class="dropdown-item" href="http://locationtech.github.io/geowave/index.html#">Latest Release</a>
               <a class="dropdown-item" href="#">Previous Releases</a>
             </div>
           </li>
@@ -83,8 +83,8 @@
               aria-expanded="false">Github</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
               <a class="dropdown-item" href="#">Source</a>
-              <a class="dropdown-item" href="#">Zip</a>
-              <a class="dropdown-item" href="#">Tar</a>
+              <a class="dropdown-item" href="https://github.com/locationtech/geowave/zipball/master">Zip</a>
+              <a class="dropdown-item" href="https://github.com/locationtech/geowave/tarball/master">Tar</a>
             </div>
           </li>
           <li class="nav-item">
@@ -96,128 +96,131 @@
   </nav>
 
   <!-- Header -->
-  <header class="bg-dark py-5 mb-5">
+  <header class="hero bg-dark py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
-        <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">
-            Some Awesome Tagline Here
+        <div class="col-lg-6">
+          <h1 class="display-4 text-white mt-5 mb-4">
+            Bringing scalability
+            to geospatial
           </h1>
           <p class="lead mb-5 text-white-50">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-            possimus ab labore provident mollitia. Id assumenda voluptate
-            earum corporis facere quibusdam quisquam iste ipsa cumque unde
-            nisi, totam quas ipsam.
+            GeoWave is a software library that connects the scalability of distributed computing frameworks and
+            key-value stores with modern geospatial software to store, retrieve and analyze massive geospatial datasets.
           </p>
+          <a class="btn btn-primary btn-labeled btn-lg" href="#">Get Started</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="/images/hero-image.png" alt="">
         </div>
       </div>
     </div>
   </header>
 
   <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 mb-5">
-        <h2>What We Do</h2>
-        <hr />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt
-          neque tempore recusandae animi soluta quasi? Asperiores rem dolore
-          eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat
-          explicabo, maiores!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-          optio neque consectetur consequatur magni in nisi, natus beatae
-          quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt
-          voluptate. Voluptatum.
-        </p>
-        <a class="btn btn-primary btn-labeled btn-lg" href="#">Call to Action <span class="btn-label pl-2">
-            <i class="icon ion-md-arrow-round-forward"></i>
-          </span></a>
-      </div>
-      <div class="col-md-4 mb-5">
-        <h2>Contact Us</h2>
-        <hr />
-        <address>
-          <strong>Start Bootstrap</strong>
-          <br />3481 Melrose Place <br />Beverly Hills, CA 90210
-          <br />
-        </address>
-        <address>
-          <abbr title="Phone">P:</abbr>
-          (123) 456-7890
-          <br />
-          <abbr title="Email">E:</abbr>
-          <a href="mailto:#">name@example.com</a>
-        </address>
-      </div>
-    </div>
-    <!-- /.row -->
+  <section class="geo-home-why container my-5 py-5">
 
     <div class="row">
-      <div class="col-md-8 text-center m-auto pb-5 ">
+      <div class="col-md-8 text-center m-auto pb-5">
         <hr class="title">
-        <h2>Some Title with a Horizontal Rule</h2>
+        <h2>Why GeoWave?</h2>
         <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda maiores fugiat sed expedita laborum
-          suscipit facere porro culpa ipsam maxime totam dignissimos ad neque architecto, ex, doloribus quae, qui
-          accusamus!
+          GeoWave includes specific tailored implementations that have advanced support for OGC spatial types (up to 3
+          dimensions), and both bounded and unbounded temporal values. Both single and ranged values are supported on
+          all axes. GeoWave’s geospatial support is built on top of the GeoTools project extensibility model.
         </p>
       </div>
     </div>
 
-
-    <div class="row">
+    <div class="row my-4">
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="" />
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sapiente esse necessitatibus neque sequi doloribus.
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="" />
-          <div class="card-body">
+        <div class="card h-100 border-0 text-center shadow">
+          <div class="card-body ">
+            <i class="icon ion-md-finger-print"></i>
             <h4 class="card-title">Card title</h4>
             <p class="card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Sapiente esse necessitatibus neque sequi doloribus totam ut
               praesentium aut.
             </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href="#">Find Out More!</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="" />
-          <div class="card-body">
+        <div class="card h-100 border-0 text-center shadow">
+          <div class="card-body ">
+            <i class="icon ion-md-finger-print"></i>
             <h4 class="card-title">Card title</h4>
             <p class="card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sapiente esse necessitatibus neque.
+              Sapiente esse necessitatibus neque sequi doloribus totam ut
+              praesentium aut.
             </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href="#">Find Out More!</a>
           </div>
         </div>
       </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-0 text-center shadow">
+          <div class="card-body ">
+            <i class="icon ion-md-finger-print"></i>
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente esse necessitatibus neque sequi doloribus totam ut
+              praesentium aut.
+            </p>
+            <a href="#">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-0 text-center shadow">
+          <div class="card-body ">
+            <i class="icon ion-md-finger-print"></i>
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente esse necessitatibus neque sequi doloribus totam ut
+              praesentium aut.
+            </p>
+            <a href="#">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-0 text-center shadow">
+          <div class="card-body ">
+            <i class="icon ion-md-finger-print"></i>
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente esse necessitatibus neque sequi doloribus totam ut
+              praesentium aut.
+            </p>
+            <a href="#">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-0 text-center shadow">
+          <div class="card-body ">
+            <i class="icon ion-md-finger-print"></i>
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente esse necessitatibus neque sequi doloribus totam ut
+              praesentium aut.
+            </p>
+            <a href="#">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-labeled btn-lg m-auto" href="#">Get Started</a>
     </div>
     <!-- /.row -->
-  </div>
+  </section>
   <!-- /.container -->
 
   <!-- Footer -->

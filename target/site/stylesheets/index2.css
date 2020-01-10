@@ -1,13 +1,32 @@
-/*!
- GeoWave Global Styles
- */
+/*! =====================
+    GeoWave Global Styles
+ ======================== */
 
-/* Header */
-header {
-  height: 50rem;
+/* Hero */
+
+.hero {
+  min-height: 800px;
+}
+
+.hero img {
+  max-height: 600px;
+  margin-top: 5rem;
+}
+
+.hero .display-4 {
+  font-weight: 600;
+}
+
+.geo-home-why .card {
+  background-color: #fafbfb;
+}
+
+.geo-home-why .card .card-title {
+  font-weight: 400;
 }
 
 /* Navbar */
+
 .navbar-brand>img {
   max-width: 12rem;
 }
