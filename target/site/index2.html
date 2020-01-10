@@ -27,46 +27,68 @@
   <!-- Ion Icons -->
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- GeoWave Bootstrap Theme -->
+  <link href="stylesheets/geowave-boostrap-theme.css" rel="stylesheet" />
+
+  <!-- Custom styles for GeoWave -->
   <link href="stylesheets/index2.css" rel="stylesheet" />
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">GeoWave</a>
+      <a class="navbar-brand" href="#">
+        <img src="/images/geowave-logo-light.png" alt="GeoWave Logo">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
+              aria-expanded="false">Documentation</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Installation Guide</a>
+              <a class="dropdown-item" href="#">Quickstart</a>
+              <a class="dropdown-item" href="#">User Guide</a>
+              <a class="dropdown-item" href="#">Developer Guide</a>
+              <a class="dropdown-item" href="#">Command Line Interface</a>
+              <a class="dropdown-item" href="#">Javadocs</a>
+              <a class="dropdown-item" href="#">Python Bindings</a>
+              <a class="dropdown-item" href="#">Support</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
+              aria-expanded="false">Support</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">GitHub Issues</a>
+              <a class="dropdown-item" href="#">Mailing list</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Version</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown06">
+              <a class="dropdown-item" href="#">Latest Snapshot</a>
+              <a class="dropdown-item" href="#">Latest Release</a>
+              <a class="dropdown-item" href="#">Previous Releases</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Github</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown06">
+              <a class="dropdown-item" href="#">Source</a>
+              <a class="dropdown-item" href="#">Zip</a>
+              <a class="dropdown-item" href="#">Tar</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a href="/ui.html" class="nav-link">UI Kit</a>
           </li>
         </ul>
       </div>
@@ -74,7 +96,7 @@
   </nav>
 
   <!-- Header -->
-  <header class="bg-primary py-5 mb-5">
+  <header class="bg-dark py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
@@ -132,6 +154,19 @@
       </div>
     </div>
     <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-8 text-center m-auto pb-5 ">
+        <hr class="title">
+        <h2>Some Title with a Horizontal Rule</h2>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda maiores fugiat sed expedita laborum
+          suscipit facere porro culpa ipsam maxime totam dignissimos ad neque architecto, ex, doloribus quae, qui
+          accusamus!
+        </p>
+      </div>
+    </div>
+
 
     <div class="row">
       <div class="col-md-4 mb-5">
@@ -194,6 +229,9 @@
     </div>
     <!-- /.container -->
   </footer>
+
+  <!-- JavaScript -->
+  <script src="/js/geowave.js"></script>
 
 </body>
 
