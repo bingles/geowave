@@ -1,31 +1,8 @@
-/*! =====================
+/*! ===================================
     GeoWave Global Styles
- ======================== */
+ ====================================== */
 
-/* Hero */
-
-.hero {
-  min-height: 800px;
-}
-
-.hero img {
-  max-height: 600px;
-  margin-top: 5rem;
-}
-
-.hero .display-4 {
-  font-weight: 600;
-}
-
-.geo-home-why .card {
-  background-color: #fafbfb;
-}
-
-.geo-home-why .card .card-title {
-  font-weight: 400;
-}
-
-/* Navbar */
+/*  ----------- Navbar ----------- */
 
 .navbar-brand>img {
   max-width: 12rem;
@@ -39,15 +16,119 @@
   margin-left: 0.5rem;
 }
 
+.navbar-dark .dropdown-item:hover, .navbar-dark .dropdown-item:focus {
+  color: #3200fa;
+}
+
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .nav-link {
     padding: .5rem 1rem;
   }
 }
 
+/*  ----------- Hero ----------- */
+
+.hero {
+  min-height: 500px;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    min-height: 800px;
+  }
+}
+
+.hero img {
+  max-height: 600px;
+  margin-top: 5rem;
+}
+
+.hero .btn-lg {
+  padding: .75rem 4.5rem;
+  font-size: 1.2rem;
+}
+
+.hero .display-4 {
+  font-weight: 600;
+}
+
+/* Wave Shape */
+
+.wave {
+  background-image: url('/images/wave.svg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-top: 50px;
+  min-height: 90px;
+  width: 101%;
+  /* Helps Chrome render image to the edge */
+}
+
+@media (min-width: 992px) {
+  .wave {
+    margin-top: 0;
+    min-height: 190px;
+  }
+}
+
+/*  ----------- Main ----------- */
+
+.geo-home-why .card {
+  background-color: #fafbfb;
+  box-shadow: 0 0.15rem 1.5rem rgba(0, 0, 0, 0.11);
+  transition: all .35s ease;
+}
+
+.geo-home-why .card .card-title {
+  font-weight: 400;
+}
+
+.geo-home-why a.card .card-text, .geo-home-why a.card .card-title {
+  color: initial;
+}
+
+.geo-home-why a.card:hover {
+  text-decoration: none !important;
+  box-shadow: 0 0.15rem 1.5rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.geo-home-why .card i.icon {
+  font-size: 45px;
+  line-height: initial;
+}
+
+/*  ----------- Typography ----------- */
+
 hr.title {
   margin: 0 auto 30px;
   background: #6c47ff;
   height: 2px;
   width: 80px;
+}
+
+/*  ----------- Animated Hyperlink----------- */
+
+a.animated {
+  position: relative;
+}
+
+a.animated:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -2px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: #3200fa;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a.animated:hover:after {
+  width: 100%;
+  left: 0;
 }
