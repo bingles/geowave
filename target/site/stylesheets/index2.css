@@ -2,6 +2,39 @@
     GeoWave Global Styles
  ====================================== */
 
+/*  ----------- Typography ----------- */
+
+hr.title {
+  margin: 0 auto 30px;
+  background: #6c47ff;
+  height: 2px;
+  width: 80px;
+}
+
+/*  ----------- Animated Hyperlinks ----------- */
+
+a.animated-link {
+  position: relative;
+}
+
+a.animated-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -2px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: #3200fa;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a.animated-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 /*  ----------- Navbar ----------- */
 
 .navbar-brand>img {
@@ -30,6 +63,7 @@
 
 .hero {
   min-height: 500px;
+  overflow-x: hidden;
 }
 
 @media (min-width: 992px) {
@@ -52,8 +86,6 @@
   font-weight: 600;
 }
 
-/* Wave Shape */
-
 .wave {
   background-image: url('/images/wave.svg');
   background-position: left top;
@@ -63,7 +95,7 @@
   margin-top: 50px;
   min-height: 90px;
   width: 101%;
-  /* Helps Chrome render image to the edge */
+  /* A width of 101% helps Chrome render image to the edge - otherwise a 1px border appears */
 }
 
 @media (min-width: 992px) {
@@ -73,7 +105,7 @@
   }
 }
 
-/*  ----------- Main ----------- */
+/*  ----------- Why GeoWave  ----------- */
 
 .geo-home-why .card {
   background-color: #fafbfb;
@@ -100,35 +132,56 @@
   line-height: initial;
 }
 
-/*  ----------- Typography ----------- */
+/*  ----------- Caruosel ----------- */
 
-hr.title {
-  margin: 0 auto 30px;
-  background: #6c47ff;
-  height: 2px;
-  width: 80px;
+.carousel .carousel-indicators {
+  bottom: -80px;
 }
 
-/*  ----------- Animated Hyperlink----------- */
+/*  ----------- CTA Banner ----------- */
 
-a.animated {
-  position: relative;
+.cta-banner {
+  background: rgb(91, 56, 227);
+  background: url(/images/geowave-logo-abstract.png) no-repeat, linear-gradient(342deg, rgb(80, 46, 214) 27%, rgba(173, 23, 255, 1) 100%);
+  background-size: contain;
+  background-position: top right;
 }
 
-a.animated:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: -2px;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  background: #3200fa;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
+@media (max-width: 992px) {
+  .cta-banner {
+    background: linear-gradient(342deg, rgb(80, 46, 214) 27%, rgba(173, 23, 255, 1) 100%);
+  }
 }
 
-a.animated:hover:after {
-  width: 100%;
-  left: 0;
+@media (max-width: 768px) {
+  .cta-banner {
+    background: linear-gradient(342deg, rgb(80, 46, 214) 27%, rgba(173, 23, 255, 1) 100%);
+  }
+}
+
+.cta-banner h2 {
+  font-size: 2.25rem;
+}
+
+.cta-banner h3 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.btn-border-2 {
+  border-width: 2px;
+}
+
+/*  ----------- Footer ----------- */
+
+footer {
+  padding-top: 4rem;
+}
+
+.sub-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #263345;
 }
