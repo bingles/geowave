@@ -62,19 +62,26 @@ a.animated-link:hover:after {
 /*  ----------- Hero ----------- */
 
 .hero {
-  min-height: 500px;
+  background: rgb(24, 33, 46);
+  background: url("/images/hero-image2.png") no-repeat right -30px, linear-gradient(87deg, #1a2132 35%, rgba(38, 37, 80, 1) 100%);
+  background-size: contain;
   overflow-x: hidden;
+  transition: all ease-in-out 0.35s;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 1199px) {
   .hero {
-    min-height: 800px;
+    background-position: -150px -80px;
+    background-size: cover;
   }
 }
 
-.hero img {
-  max-height: 600px;
-  margin-top: 5rem;
+@media (max-width: 991px) {
+  .hero {
+    background: linear-gradient(87deg, #1a2132 0%, rgba(38, 37, 80, 1) 100%);
+    background-position: center;
+    background-size: initial;
+  }
 }
 
 .hero .btn-lg {
@@ -184,4 +191,22 @@ footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-top: 1px solid #263345;
+}
+
+/*  ----------- Page Preloader ----------- */
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgb(23, 22, 22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: opacity 0.3s linear;
+  opacity: 1;
+  transform: opacity 1s linear;
 }

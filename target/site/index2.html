@@ -95,11 +95,11 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="hero bg-dark pt-5">
-    <div class="container h-100">
+  <!-- Header/Hero -->
+  <header class="hero bg-dark pt-5 text-center text-lg-left">
+    <div class="container h-100 my-5 py-3">
       <div class="row h-100 align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 ">
           <h1 class="display-4 text-white mt-5 mb-4">
             Bringing scalability
             to geospatial
@@ -109,9 +109,6 @@
             key-value stores with modern geospatial software to store, retrieve and analyze massive geospatial datasets.
           </p>
           <a class="btn btn-primary btn-labeled btn-lg rounded-pill" href="#">Get started</a>
-        </div>
-        <div class="col-lg-6">
-          <img src="/images/hero-image.png" class="d-none d-lg-block" alt="">
         </div>
       </div>
     </div>
@@ -325,6 +322,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Page Preloader Animation -->
+  <div class="preloader">
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid" class="lds-ripple" style="background:0 0">
+      <circle cx="50" cy="50" r="4.719" fill="none" stroke="#8262ff" stroke-width="2">
+        <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1"
+          begin="-1.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1"
+          begin="-1.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="50" cy="50" r="27.591" fill="none" stroke="#5699d2" stroke-width="2">
+        <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1"
+          begin="0s" repeatCount="indefinite" />
+        <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1"
+          begin="0s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
 
   <!-- JavaScript -->
   <script src="/js/geowave.js"></script>
