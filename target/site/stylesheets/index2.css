@@ -37,6 +37,10 @@ a.animated-link:hover:after {
 
 /*  ----------- Navbar ----------- */
 
+.navbar-brand {
+  z-index: 51;
+}
+
 .navbar-brand>img {
   max-width: 12rem;
 }
@@ -59,6 +63,27 @@ a.animated-link:hover:after {
   }
 }
 
+@media (max-width: 767px) {
+  .navbar-dark .navbar-toggler {
+    border: 0;
+    z-index: 51;
+  }
+  .navbar-dark .navbar-toggler:hover {
+    opacity: 0.75;
+  }
+  .navbar-collapse {
+    background-color: #17202e;
+    height: 100vh;
+    left: 0;
+    padding: 6rem 1.5rem;
+    position: absolute;
+    top: 0;
+    transition: none;
+    width: 100%;
+    z-index: 50;
+  }
+}
+
 /*  ----------- Hero ----------- */
 
 .hero {
@@ -66,7 +91,6 @@ a.animated-link:hover:after {
   background: url("/images/hero-image2.png") no-repeat right -30px, linear-gradient(87deg, #1a2132 35%, rgba(38, 37, 80, 1) 100%);
   background-size: contain;
   overflow-x: hidden;
-  transition: all ease-in-out 0.35s;
 }
 
 @media (max-width: 1199px) {

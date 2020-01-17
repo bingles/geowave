@@ -1,5 +1,5 @@
 // Navbar Fade In
-var scrollFadePixels = 100;
+var scrollFadePixels = 20;
 
 var fadeNavbar = function (window) {
   var opacity = window.scrollTop () / scrollFadePixels;
