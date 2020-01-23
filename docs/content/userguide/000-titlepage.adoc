@@ -1,13 +1,12 @@
 [[userguide-intro]]
 <<<
 
-_v${project.version}_
-
 :linkattrs:
 
-image:geowave-icon-logo-cropped.png[width="18%"]
+= GeoWave User Guide
 
-= GeoWave User Guide 
+This page is an overview of the GeoWave documentation and related resources.
+
 
 ////
 PDF Generation gives an error if you try to use icons

@@ -20,6 +20,7 @@
 		<asciidoctorj.pdf.version>1.5.0-alpha.7</asciidoctorj.pdf.version>
 		<asciidoctor.pdf.version>1.5.0.alpha.7</asciidoctor.pdf.version>
 		<jruby.version>1.7.20.1</jruby.version>
+		<maven.build.timestamp.format>EEEEE, MMMMM dd, yyyy 'at' hh:mm a 'UTC'</maven.build.timestamp.format>
 	</properties>
 
 	<repositories>
@@ -89,7 +90,7 @@
 								<condition property="version_url" value="latest">
 									<isset property="isSnapshot" />
 								</condition>
-								<!-- Properties in ant are immutable, so the following assignments 
+								<!-- Properties in ant are immutable, so the following assignments
 									will only take place if deployFileUrl is not yet set. -->
 								<property name="version_url" value="${project.version}" />
 							</target>
@@ -156,7 +157,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-index" dir="${project.basedir}/content/geowave-index" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-index">
 									<map from="${project.basedir}/content/geowave-index/" to="include::" />
@@ -174,7 +175,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-documentation-archives" dir="${project.basedir}/content/documentation-archives" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-documentation-archives">
 									<map from="${project.basedir}/content/documentation-archives/" to="include::" />
@@ -192,7 +193,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-packages" dir="${project.basedir}/content/packages" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-packages">
 									<map from="${project.basedir}/content/packages/" to="include::" />
@@ -210,7 +211,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file" dir="${project.basedir}/content/devguide" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file">
 									<map from="${project.basedir}/content/devguide/" to="include::" />
@@ -228,7 +229,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file" dir="${project.basedir}/content/userguide" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file">
 									<map from="${project.basedir}/content/userguide/" to="include::" />
@@ -246,7 +247,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-quickstart" dir="${project.basedir}/content/quickstart" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-quickstart">
 									<map from="${project.basedir}/content/quickstart/" to="include::" />
@@ -264,7 +265,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-aws-env" dir="${project.basedir}/content/aws-env" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-aws-env">
 									<map from="${project.basedir}/content/aws-env/" to="include::" />
@@ -282,7 +283,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-standalone-installer" dir="${project.basedir}/content/standalone-installer" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-standalone-installer">
 									<map from="${project.basedir}/content/standalone-installer/" to="include::" />
@@ -300,7 +301,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-walkthrough-vector" dir="${project.basedir}/content/walkthrough-vector" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-walkthrough-vector">
 									<map from="${project.basedir}/content/walkthrough-vector/" to="include::" />
@@ -318,7 +319,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-walkthrough-raster" dir="${project.basedir}/content/walkthrough-raster" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-walkthrough-raster">
 									<map from="${project.basedir}/content/walkthrough-raster/" to="include::" />
@@ -336,7 +337,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-interact-cluster" dir="${project.basedir}/content/interact-cluster" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-interact-cluster">
 									<map from="${project.basedir}/content/interact-cluster/" to="include::" />
@@ -354,7 +355,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-integrate-geoserver" dir="${project.basedir}/content/integrate-geoserver" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-integrate-geoserver">
 									<map from="${project.basedir}/content/integrate-geoserver/" to="include::" />
@@ -372,7 +373,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-jupyter" dir="${project.basedir}/content/jupyter" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-jupyter">
 									<map from="${project.basedir}/content/jupyter/" to="include::" />
@@ -390,7 +391,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-join" dir="${project.basedir}/content/spatial-join" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-join">
 									<map from="${project.basedir}/content/spatial-join/" to="include::" />
@@ -408,7 +409,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-zeppelin" dir="${project.basedir}/content/zeppelin" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-zeppelin">
 									<map from="${project.basedir}/content/zeppelin/" to="include::" />
@@ -426,7 +427,7 @@
 						<configuration>
 							<target>
 								<fileset id="generate-index-file-commands" dir="${project.basedir}/content/commands" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
+								<!-- Abusing this a bit to do some simple templating, I have a file
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-commands">
 									<map from="${project.basedir}/content/commands/" to="include::" />
@@ -907,13 +908,15 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
+										<stylesheet>blank.css</stylesheet>
+										<title>GeoWave</title>
 										<imagesdir>./images</imagesdir>
 										<icons>font</icons>
 										<sectanchors>true</sectanchors>
 										<idprefix />
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -976,7 +979,7 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
+										<!-- <stylesheet>blank.css</stylesheet> -->
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1001,7 +1004,7 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
+										<!-- <stylesheet>blank.css</stylesheet> -->
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1026,7 +1029,7 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
+										<!-- <stylesheet>blank.css</stylesheet> -->
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>

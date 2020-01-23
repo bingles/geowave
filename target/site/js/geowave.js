@@ -15,19 +15,19 @@ $ (window).scroll (function () {
 
 // Page Preloader Animation
 // ==============================
-const preloader = document.querySelector ('.preloader');
+// const preloader = document.querySelector ('.preloader');
 
-const fadeEffect = setInterval (() => {
-  // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
-  if (!preloader.style.opacity) {
-    preloader.style.opacity = 1;
-  }
-  if (preloader.style.opacity > 0) {
-    preloader.style.opacity -= 0.1;
-  } else {
-    preloader.style.display = 'none';
-  }
-}, 150);
+// const fadeEffect = setInterval (() => {
+//   // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
+//   if (!preloader.style.opacity) {
+//     preloader.style.opacity = 1;
+//   }
+//   if (preloader.style.opacity > 0) {
+//     preloader.style.opacity -= 0.1;
+//   } else {
+//     preloader.style.display = 'none';
+//   }
+// }, 150);
 
 // Image Slider and Lightbox Combination
 // Swiper JS: https://swiperjs.com/
@@ -294,3 +294,8 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM ('.my-gallery');
+
+// Footer
+$ (document).ready (function () {
+  $ ('#footer').replaceWith ($ ('#geowave-footer'));
+});
