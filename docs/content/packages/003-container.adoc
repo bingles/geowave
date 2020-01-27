@@ -5,34 +5,33 @@
 
 ++++
 <!-- Start Main Content Container -->
-    <div class="container-fluid">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-xs-6 col-md-1">&nbsp;</div>
-            <div class="col-xs-6 col-md-10">
+            <div class="col-12">
 
                 <!-- Start Tabs -->
-                <div role="tabpanel">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="tab-content" data-toggle="tab">
                         <div role="tabpanel" class="tab-pane active" id="packages">
                             <div class="page-header col-md-12">
                                 <h2> GeoWave Packages</h2>
                                 <p>
-                                    This site contains links to GeoWave jar files, RPM packaged versions of GeoWave and compressed 
-									archives (which include other content like service and logrotate scripts in addition to the source code). 
-									Individual files can be download or you can configure a host to install and keep updated with YUM 
+                                    This site contains links to GeoWave jar files, RPM packaged versions of GeoWave and compressed
+									archives (which include other content like service and logrotate scripts in addition to the source code).
+									Individual files can be download or you can configure a host to install and keep updated with YUM
 									using the commands below.
                                 </p>
                                 <br/>
                                 <h4>Configure a host to use GeoWave Release RPMs</h4>
                         <pre>
-						
+
 		rpm -Uvh http://s3.amazonaws.com/geowave-rpms/release/noarch/geowave-repo-1.0-3.noarch.rpm
 		yum --enablerepo=geowave search geowave-$VERSION-$VENDOR (example: geowave-${project.version}-apache)
                         </pre>
                                 <br/>
 								<h4>Configure a host to use GeoWave Development RPMs</h4>
                         <pre>
-						
+
 		rpm -Uvh http://s3.amazonaws.com/geowave-rpms/dev/noarch/geowave-repo-dev-1.0-3.noarch.rpm
 		yum --enablerepo=geowave-dev search geowave-$VERSION-$VENDOR (example: geowave-${project.version}-apache)
                         </pre>
@@ -143,9 +142,9 @@
                                     These are stable releases and are the recommended option to use for your deployment. There
                                     are RPMs, SRPMs and .tar.gz archives included in the list, use the search to filter.
                                 </p>
-                                <div class="table-responsive">
+                                <div class="table table-hover">
                                     <table class="file-listing display compact" cellspacing="0" width="100%">
-                                        <thead><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead>
+                                        <thead class="thead-light"><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead class="table-light">
                                     </table>
                                 </div>
                                 <div class="timestamp"></div>
@@ -161,9 +160,9 @@
                                     These are built for every commit that passes automated tests. There
                                     are RPMs, SRPMs and .tar.gz archives included in the list, use the search to filter.
                                 </p>
-                                <div class="table-responsive">
+                                <div class="table table-hover">
                                     <table class="file-listing display compact" cellspacing="0" width="100%">
-                                        <thead><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead>
+                                        <thead class="thead-light"><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead class="table-light">
                                     </table>
                                 </div>
                                 <div class="timestamp"></div>
@@ -178,9 +177,9 @@
                                 <p>
                                     These are stable releases and are the recommended option to use for your deployment.
                                 </p>
-                                <div class="table-responsive">
+                                <div class="table table-hover">
                                     <table class="file-listing display compact" cellspacing="0" width="100%">
-                                        <thead><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead>
+                                        <thead class="thead-light"><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead class="table-light">
                                     </table>
                                 </div>
                                 <div class="timestamp"></div>
@@ -195,9 +194,9 @@
                                 <p>
                                     These are built for every commit that passes automated tests.
                                 </p>
-                                <div class="table-responsive">
+                                <div class="table table-hover">
                                     <table class="file-listing display compact" cellspacing="0" width="100%">
-                                        <thead><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead>
+                                        <thead class="thead-light"><tr><th>Name</th><th>Last Modified</th><th>Size</th></tr></thead class="table-light">
                                     </table>
                                 </div>
                                 <div class="timestamp"></div>
@@ -213,6 +212,3 @@
     </div>
     <!-- End Content Container -->
 ++++
-
-
-

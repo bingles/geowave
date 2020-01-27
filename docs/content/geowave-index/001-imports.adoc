@@ -3,16 +3,19 @@
 
 :linkattrs:
 
-== GeoWave
-
 ++++
-	<script type='text/javascript' src='js/jquery.min.js'></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/carousel.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/geowave-index.css">
-    <style type='text/css'>.carousel-caption{border-radius:4px;background-color:#2c2c2c;}</style>
+    <!-- Ion Icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- GeoWave Bootstrap Theme -->
+    <link href="stylesheets/geowave-boostrap-theme.css" rel="stylesheet" />
+
+    <!-- Photoswipe & Swiper Styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for GeoWave -->
+    <link href="stylesheets/geowave.css" rel="stylesheet" />
 ++++
-
-
