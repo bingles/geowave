@@ -1,0 +1,21 @@
+[[deeper]]
+<<<
+
+:linkattrs:
+
+== Digging Deeper
+
+More information on GeoWave can be found in the following guides:
+
+link:installation-guide.html[**Installation Guide**, window="_blank"]
+
+link:quickstart.html[**Quickstart**, window="_blank"]
+
+link:userguide.html[**User Guide**, window="_blank"]
+
+link:devguide.html[**Developer Guide**, window="_blank"]
+
+link:commands.html[**Command-Line Interface Documentation**, window="_blank"]
+
+If there are questions or issues encountered, or topics of interest that could be expounded on, please create an issue within the link:https://github.com/locationtech/geowave/issues[GeoWave project GitHub page, window="_blank"].
+
