@@ -1,6 +1,14 @@
 <<<
 
-= GeoWave EMR Quickstart: Zeppelin Notebook
+= GeoWave EMR Quickstart Guide: Zeppelin Notebook
+
+ifdef::backend-html5[]
+++++
+<script>
+var doc_name = "EMR Quickstart Guide";
+</script>
+++++
+endif::backend-html5[]
 
 :linkattrs:
 

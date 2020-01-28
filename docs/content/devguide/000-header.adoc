@@ -4,3 +4,11 @@
 
 = GeoWave Developer Guide
 
+ifdef::backend-html5[]
+++++
+<script>
+var doc_name = "Developer Guide";
+</script>
+++++
+endif::backend-html5[]
+

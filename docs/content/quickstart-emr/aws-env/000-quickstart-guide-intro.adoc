@@ -1,6 +1,14 @@
 <<<
 
-= GeoWave EMR Quickstart: AWS Environment Setup Guide
+= GeoWave EMR Quickstart Guide: AWS Environment Setup Guide
+
+ifdef::backend-html5[]
+++++
+<script>
+var doc_name = "EMR Quickstart Guide";
+</script>
+++++
+endif::backend-html5[]
 
 :linkattrs:
 

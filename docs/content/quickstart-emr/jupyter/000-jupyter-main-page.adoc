@@ -1,6 +1,14 @@
 <<<
 
-= GeoWave EMR Quickstart: Jupyter Notebook
+= GeoWave EMR Quickstart Guide: Jupyter Notebook
+
+ifdef::backend-html5[]
+++++
+<script>
+var doc_name = "EMR Quickstart Guide";
+</script>
+++++
+endif::backend-html5[]
 
 :linkattrs:
 

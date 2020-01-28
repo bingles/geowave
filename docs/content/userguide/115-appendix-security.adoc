@@ -70,7 +70,7 @@ $ geowave config set geowave.encryption.enabled={true|false}
 
 [NOTE]
 ====
-It is HIGHLY discouraged against disabling password encryption, particularly in a production (or similar) environment. While this option is available for assisting with debugging credentials, it should be avoided outside of production-like environments in order to avoid leaking data source credentials to unauthorized parties.
+Disabling password encryption is HIGHLY discouraged, particularly in a production (or similar) environment. While this option is available for assisting with debugging credentials, it should be avoided in production-like environments to avoid leaking credentials to unauthorized parties.
 ====
 
 

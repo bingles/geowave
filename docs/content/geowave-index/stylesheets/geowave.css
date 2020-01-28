@@ -105,11 +105,21 @@ a.animated-link:hover:after {
   }
 }
 
+/*  ----------- Anchor Offsets ----------- */
+
+*[id]:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -75px; 
+  height: 75px; 
+  visibility: hidden; 
+}
+
 /*  ----------- Hero ----------- */
 
 .hero {
   background: rgb(24, 33, 46);
-  background: url("/images/hero-image2.png") no-repeat right -30px, linear-gradient(87deg, #1a2132 35%, rgba(38, 37, 80, 1) 100%);
+  background: url("../images/hero-image2.png") no-repeat right -30px, linear-gradient(87deg, #1a2132 35%, rgba(38, 37, 80, 1) 100%);
   background-size: contain;
   overflow-x: hidden;
 }
@@ -139,7 +149,7 @@ a.animated-link:hover:after {
 }
 
 .wave {
-  background-image: url('/images/wave.svg');
+  background-image: url('../images/wave.svg');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -261,7 +271,7 @@ ul.swiper-wrapper {
 
 .cta-banner {
   background: rgb(91, 56, 227);
-  background: url(/images/geowave-logo-abstract.png) no-repeat, linear-gradient(342deg, rgb(80, 46, 214) 27%, rgba(173, 23, 255, 1) 100%);
+  background: url(../images/geowave-logo-abstract.png) no-repeat, linear-gradient(342deg, rgb(80, 46, 214) 27%, rgba(173, 23, 255, 1) 100%);
   background-size: contain;
   background-position: top right;
 }
@@ -330,6 +340,10 @@ footer a:hover {
   .footer-nav .row {
     justify-content: flex-start;
   }
+}
+
+.footer-text {
+  text-align: center;
 }
 
 /*  ----------- Page Preloader ----------- */

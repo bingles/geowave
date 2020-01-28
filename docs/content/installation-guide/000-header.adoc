@@ -1,4 +1,12 @@
 <<<
 
-= GeoWave Installation
+= GeoWave Installation Guide
+
+ifdef::backend-html5[]
+++++
+<script>
+var doc_name = "Installation Guide";
+</script>
+++++
+endif::backend-html5[]
 

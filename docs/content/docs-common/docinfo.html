@@ -1,8 +1,10 @@
 <!-- docinfo.html -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
 <!-- Bootstrap 4.4.1 CDN -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -29,17 +31,17 @@
     crossorigin="anonymous"></script>
 
 <!-- JS - GeoWave  -->
-<script src="/js/geowave.js"></script>
-
+<script src="js/geowave.js"></script>
+<script src="js/versions.js"></script>
 
 <!-- Start Navbar -->
 <nav class="navbar navbar-docs navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <img src="/images/geowave-logo-light.png" alt="GeoWave Logo">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/geowave-logo-light.png" alt="GeoWave Logo">
         </a>
-        <span>|</span>
-        <a href="#geowave-user-guide">DEVELOPER GUIDE</a>
+        <span id="doc-title-separator">|</span>
+        <a id="doc-title" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,14 +52,15 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Documentation</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown06">
-                        <a class="dropdown-item" href="#">Installation Guide</a>
-                        <a class="dropdown-item" href="quickstart.html">Quickstart</a>
+                        <a class="dropdown-item" href="overview.html">GeoWave Overview</a>
+                        <a class="dropdown-item" href="installation-guide.html">Installation Guide</a>
+                        <a class="dropdown-item" href="quickstart.html">Quickstart Guide</a>
                         <a class="dropdown-item" href="userguide.html">User Guide</a>
                         <a class="dropdown-item" href="devguide.html">Developer Guide</a>
-                        <a class="dropdown-item" href="commands.html">Command Line Interface</a>
+                        <a class="dropdown-item" href="commands.html">Command-Line Interface</a>
+						<hr class="my-1">
                         <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
                         <a class="dropdown-item" href="pydocs/index.html">Python Bindings</a>
-                        <a class="dropdown-item" href="#">Support</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -65,32 +68,22 @@
                         aria-haspopup="true" aria-expanded="false">Support</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown06">
                         <a class="dropdown-item" href="https://github.com/locationtech/geowave/issues">GitHub Issues</a>
-                        <a class="dropdown-item" href="#">Mailing list</a>
+                        <a class="dropdown-item" href="https://gitter.im/locationtech/geowave">Gitter</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="current-version" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"></a>
+                    <div id="version-menu" class="dropdown-menu" aria-labelledby="dropdown06">
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Version 1.0.0</a>
+                        aria-haspopup="true" aria-expanded="false">GitHub</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown06">
-                        <a class="dropdown-item" href="#">Version 0.9.0</a>
-                        <a class="dropdown-item" href="#">Version 0.8.0</a>
-                        <a class="dropdown-item" href="#">Version 0.7.0</a>
-                        <a class="dropdown-item" href="#">Version 0.6.0</a>
-                        <a class="dropdown-item" href="#">Version 0.5.0</a>
-                        <a class="dropdown-item" href="#">Version 0.4.0</a>
-                        <a class="dropdown-item" href="#">Version 0.3.0</a>
-                        <a class="dropdown-item" href="#">Previous Releases</a>
-                        <hr class="my-1">
-                        <a class="dropdown-item" href="#">Packages</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Github</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown06">
-                        <a class="dropdown-item" href="#">Source</a>
-                        <a class="dropdown-item" href="https://github.com/locationtech/geowave/zipball/master">Zip</a>
-                        <a class="dropdown-item" href="https://github.com/locationtech/geowave/tarball/master">Tar</a>
+                        <a class="dropdown-item" href="https://github.com/locationtech/geowave">GeoWave Repository</a>
+                        <a class="dropdown-item" href="https://github.com/locationtech/geowave/zipball/master">Download Source (Zip)</a>
+                        <a class="dropdown-item" href="https://github.com/locationtech/geowave/tarball/master">Downlaod Source (Tar)</a>
                     </div>
                 </li>
             </ul>

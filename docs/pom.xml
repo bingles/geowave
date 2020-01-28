@@ -20,6 +20,7 @@
 		<asciidoctorj.pdf.version>1.5.0-alpha.7</asciidoctorj.pdf.version>
 		<asciidoctor.pdf.version>1.5.0.alpha.7</asciidoctor.pdf.version>
 		<jruby.version>1.7.20.1</jruby.version>
+		<maven.build.timestamp.format>EEEEE, MMMMM dd, yyyy 'at' hh:mm a 'UTC'</maven.build.timestamp.format>
 	</properties>
 
 	<build>
@@ -113,6 +114,198 @@
 							</nonFilteredFileExtensions>
 						</configuration>
 					</execution>
+					<execution>
+						<id>copy-docs-common-userguide</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/userguide/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-devguide</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/devguide/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-commands</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/commands/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-quickstart</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-installation-guide</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/installation-guide/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-overview</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/overview/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-quickstart-emr</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart-emr/quickstart-emr/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-aws-env</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart-emr/aws-env/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-interact-cluster</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart-emr/interact-cluster/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-jupyter</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart-emr/jupyter/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-spatial-join</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart-emr/spatial-join/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-docs-common-zeppelin</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/quickstart-emr/zeppelin/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
 				</executions>
 				<dependencies>
 		            <dependency>
@@ -149,11 +342,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-installation-guide" dir="${project.basedir}/content/installation-guide" includes="*.adoc" />
+								<fileset id="generate-installation-guide" dir="${project.build.directory}/content/installation-guide" includes="*.adoc">
+								  <exclude name="**/installation-guide.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-installation-guide">
-									<map from="${project.basedir}/content/installation-guide/" to="include::" />
+									<map from="${project.build.directory}/content/installation-guide/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/installation-guide/installation-guide.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -167,31 +362,15 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-overview" dir="${project.basedir}/content/overview" includes="*.adoc" />
+								<fileset id="generate-index-overview" dir="${project.build.directory}/content/overview" includes="*.adoc">
+								  <exclude name="**/overview.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-overview">
-									<map from="${project.basedir}/content/overview/" to="include::" />
+									<map from="${project.build.directory}/content/overview/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/overview/overview.adoc">${asciidoc-files}[]</echo>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>generate-documentation-archives</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<fileset id="generate-index-documentation-archives" dir="${project.basedir}/content/documentation-archives" includes="*.adoc" />
-								<!-- Abusing this a bit to do some simple templating, I have a file 
-									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
-								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-documentation-archives">
-									<map from="${project.basedir}/content/documentation-archives/" to="include::" />
-								</pathconvert>
-								<echo file="${project.build.directory}/content/documentation-archives/documentation-archives.adoc">${asciidoc-files}[]</echo>
 							</target>
 						</configuration>
 						<goals>
@@ -221,11 +400,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file" dir="${project.basedir}/content/devguide" includes="*.adoc" />
+								<fileset id="generate-index-file" dir="${project.build.directory}/content/devguide" includes="*.adoc">
+								  <exclude name="**/devguide.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file">
-									<map from="${project.basedir}/content/devguide/" to="include::" />
+									<map from="${project.build.directory}/content/devguide/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/devguide/devguide.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -239,11 +420,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file" dir="${project.basedir}/content/userguide" includes="*.adoc" />
+								<fileset id="generate-index-file" dir="${project.build.directory}/content/userguide" includes="*.adoc">
+								  <exclude name="**/userguide.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file">
-									<map from="${project.basedir}/content/userguide/" to="include::" />
+									<map from="${project.build.directory}/content/userguide/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/userguide/userguide.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -257,11 +440,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-quickstart" dir="${project.basedir}/content/quickstart" includes="*.adoc" />
+								<fileset id="generate-index-file-quickstart" dir="${project.build.directory}/content/quickstart" includes="*.adoc">
+								  <exclude name="**/quickstart.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-quickstart">
-									<map from="${project.basedir}/content/quickstart/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart/quickstart.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -275,11 +460,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-quickstart-emr" dir="${project.basedir}/content/quickstart-emr/quickstart-emr" includes="*.adoc" />
+								<fileset id="generate-quickstart-emr" dir="${project.build.directory}/content/quickstart-emr/quickstart-emr" includes="*.adoc">
+								  <exclude name="**/quickstart-emr.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-quickstart-emr">
-									<map from="${project.basedir}/content/quickstart-emr/quickstart-emr/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart-emr/quickstart-emr/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart-emr/quickstart-emr/quickstart-emr.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -293,11 +480,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-aws-env" dir="${project.basedir}/content/quickstart-emr/aws-env" includes="*.adoc" />
+								<fileset id="generate-index-file-aws-env" dir="${project.build.directory}/content/quickstart-emr/aws-env" includes="*.adoc">
+								  <exclude name="**/aws-env.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-aws-env">
-									<map from="${project.basedir}/content/quickstart-emr/aws-env/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart-emr/aws-env/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart-emr/aws-env/aws-env.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -311,11 +500,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-interact-cluster" dir="${project.basedir}/content/quickstart-emr/interact-cluster" includes="*.adoc" />
+								<fileset id="generate-index-file-interact-cluster" dir="${project.build.directory}/content/quickstart-emr/interact-cluster" includes="*.adoc">
+								  <exclude name="**/interact-cluster.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-interact-cluster">
-									<map from="${project.basedir}/content/quickstart-emr/interact-cluster/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart-emr/interact-cluster/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart-emr/interact-cluster/interact-cluster.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -329,11 +520,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-jupyter" dir="${project.basedir}/content/quickstart-emr/jupyter" includes="*.adoc" />
+								<fileset id="generate-index-file-jupyter" dir="${project.build.directory}/content/quickstart-emr/jupyter" includes="*.adoc">
+								  <exclude name="**/jupyter.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-jupyter">
-									<map from="${project.basedir}/content/quickstart-emr/jupyter/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart-emr/jupyter/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart-emr/jupyter/jupyter.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -347,11 +540,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-join" dir="${project.basedir}/content/quickstart-emr/spatial-join" includes="*.adoc" />
+								<fileset id="generate-index-file-join" dir="${project.build.directory}/content/quickstart-emr/spatial-join" includes="*.adoc">
+								  <exclude name="**/spatial-join.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-join">
-									<map from="${project.basedir}/content/quickstart-emr/spatial-join/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart-emr/spatial-join/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart-emr/spatial-join/spatial-join.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -365,11 +560,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-zeppelin" dir="${project.basedir}/content/quickstart-emr/zeppelin" includes="*.adoc" />
+								<fileset id="generate-index-file-zeppelin" dir="${project.build.directory}/content/quickstart-emr/zeppelin" includes="*.adoc">
+								  <exclude name="**/zeppelin.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-zeppelin">
-									<map from="${project.basedir}/content/quickstart-emr/zeppelin/" to="include::" />
+									<map from="${project.build.directory}/content/quickstart-emr/zeppelin/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/quickstart-emr/zeppelin/zeppelin.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -383,11 +580,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-commands" dir="${project.basedir}/content/commands" includes="*.adoc" />
+								<fileset id="generate-index-file-commands" dir="${project.build.directory}/content/commands" includes="*.adoc">
+								  <exclude name="**/commands.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-commands">
-									<map from="${project.basedir}/content/commands/" to="include::" />
+									<map from="${project.build.directory}/content/commands/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/commands/commands.adoc">${asciidoc-files}[]</echo>
 							</target>
@@ -806,13 +1005,15 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
+										<stylesheet>blank.css</stylesheet>
+										<title>GeoWave</title>
 										<imagesdir>./images</imagesdir>
 										<icons>font</icons>
 										<sectanchors>true</sectanchors>
 										<idprefix />
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -829,7 +1030,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<icons>font</icons>
 										<sectanchors>true</sectanchors>
@@ -837,29 +1037,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
-									</attributes>
-								</configuration>
-							</execution>
-							<execution>
-								<id>generate-html-documentation-archives</id>
-								<phase>generate-resources</phase>
-								<goals>
-									<goal>process-asciidoc</goal>
-								</goals>
-								<configuration>
-									<sourceDirectory>${project.build.directory}/content/documentation-archives</sourceDirectory>
-									<sourceDocumentName>documentation-archives.adoc</sourceDocumentName>
-									<backend>html5</backend>
-									<sourceHighlighter>highlightjs</sourceHighlighter>
-									<attributes>
-										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
-										<imagesdir>./images</imagesdir>
-										<icons>font</icons>
-										<sectanchors>true</sectanchors>
-										<idprefix />
-										<idseparator>-</idseparator>
-										<docinfo1>true</docinfo1>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -883,6 +1061,7 @@
 										<idprefix />
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -899,7 +1078,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -908,6 +1086,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -924,7 +1103,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -933,6 +1111,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -949,7 +1128,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -958,6 +1136,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -974,7 +1153,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -983,6 +1161,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -999,7 +1178,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1008,6 +1186,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -1024,7 +1203,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<icons>font</icons>
 										<sectanchors>true</sectanchors>
@@ -1033,6 +1211,7 @@
 										<docinfo1>true</docinfo1>
 										<toc>right</toc>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -1049,7 +1228,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1058,6 +1236,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -1074,7 +1253,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1083,6 +1261,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -1099,7 +1278,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1108,6 +1286,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -1124,7 +1303,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1133,6 +1311,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
@@ -1149,7 +1328,6 @@
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
 										<stylesdir>../geowave-index/stylesheets</stylesdir>
-										<stylesheet>geowave.css</stylesheet>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1158,6 +1336,7 @@
 										<idseparator>-</idseparator>
 										<docinfo1>true</docinfo1>
 										<toc>left</toc>
+										<revdate>${maven.build.timestamp}</revdate>
 									</attributes>
 								</configuration>
 							</execution>
