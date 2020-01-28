@@ -9,14 +9,14 @@ GeoWave can be packaged in several different ways.  Prior to packaging GeoWave, 
 
 === GeoWave CLI Tools
 
-GeoWave artifacts can be packaged into a single jar that can be used to execute CLI commands by running the following Maven command from the GeoWave root directory:
+GeoWave artifacts can be packaged into a single JAR that can be used to execute CLI commands by running the following Maven command from the GeoWave root directory:
 
 [source, bash]
 ----
 $ mvn package -P geowave-tools-singlejar -Dfindbugs.skip -Dspotbugs.skip -DskipTests
 ----
 
-After the packaging process is complete, the resulting jar will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-geoserver.jar`.  To use this jar for CLI commands you can execute it using the following java command:
+After the packaging process is complete, the resulting JAR will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-geoserver.jar`.  To use this jar for CLI commands you can execute it using the following java command:
 
 [source, bash]
 ----
@@ -43,36 +43,36 @@ After the alias has been created, you will be able to use the GeoWave CLI with t
 
 === GeoServer Plugin
 
-GeoWave artifacts can be packaged into a single jar to be used in a GeoServer installation by running the following Maven command from the GeoWave root directory:
+GeoWave artifacts can be packaged into a single JAR to be used in a GeoServer installation by running the following Maven command from the GeoWave root directory:
 
 [source, bash]
 ----
 $ mvn package -P geotools-container-singlejar -Dfindbugs.skip -Dspotbugs.skip -DskipTests
 ----
 
-After the packaging process is complete, the resulting jar will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-geoserver.jar`. To use this jar with a GeoServer installation, simply copy it to the `WEB-INF/lib` directory of GeoServer's installation and restart the web service that GeoServer is running on.
+After the packaging process is complete, the resulting JAR will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-geoserver.jar`. To use this jar with a GeoServer installation, simply copy it to the `WEB-INF/lib` directory of GeoServer's installation and restart the web service that GeoServer is running on.
 
-=== Packaging Accumulo Jar
+=== Packaging Accumulo JAR
 
-GeoWave artifacts can be packaged into a jar to be used by Accumulo for serverside operations by running the following Maven command from the GeoWave root directory:
+GeoWave artifacts can be packaged into a JAR to be used by Accumulo for serverside operations by running the following Maven command from the GeoWave root directory:
 
 [source, bash]
 ----
 $ mvn package -P accumulo-container-singlejar -Dfindbugs.skip -Dspotbugs.skip -DskipTests
 ----
 
-After the packaging process is complete, the resulting jar will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-accumulo.jar`. See link:userguide.html#accumulo-config[Accumulo Configuration, window="_blank"] in the User Guide for more information about using this jar.
+After the packaging process is complete, the resulting JAR will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-accumulo.jar`. See link:userguide.html#accumulo-config[Accumulo Configuration, window="_blank"] in the User Guide for more information about using this jar.
 
-=== HBase Coprocessor Jar
+=== HBase Coprocessor JAR
 
-GeoWave artifacts can be packaged into a coprocessor jar for HBase serverside operations by running the following Maven command from the GeoWave root directory:
+GeoWave artifacts can be packaged into a coprocessor JAR for HBase serverside operations by running the following Maven command from the GeoWave root directory:
 
 [source, bash]
 ----
 $ mvn package -P hbase-container-singlejar -Dfindbugs.skip -Dspotbugs.skip -DskipTests
 ----
 
-After the packaging process is complete, the resulting jar will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-hbase.jar`. In order to use this jar, copy it to an HDFS location that is accessible to HBase. When configuring the GeoWave HBase data store (either through the GeoServer plugin or the CLI), set the `coprocessorJar` option to the HDFS location of the jar.
+After the packaging process is complete, the resulting JAR will be available in the `deploy/target` directory with a name like `geowave-deploy-<version>-hbase.jar`. In order to use this jar, copy it to an HDFS location that is accessible to HBase. When configuring the GeoWave HBase data store (either through the GeoServer plugin or the CLI), set the `coprocessorJar` option to the HDFS location of the jar.
 
 === Standalone Installers
 

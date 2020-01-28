@@ -65,7 +65,7 @@ When the `hbase` type option is used, additional options are:
   A comma-separated list of zookeeper servers that an HBase instance is using.
    
 *--coprocessorJar* _<path>_::
-  Path (HDFS URL) to the jar containing coprocessor classes.
+  Path (HDFS URL) to the JAR containing coprocessor classes.
 
 *--disableVerifyCoprocessors*::
   If specified, disable coprocessor verification, which ensures that coprocessors have been added to the HBase table prior to executing server-side operations.

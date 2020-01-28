@@ -181,7 +181,7 @@ This will generate the Python API documentation in the `python/src/main/python/h
 
 === Docker Build Process
 
-We have support for building both the GeoWave jar artifacts and RPMs from Docker containers. This capability is useful for a number of different situations:
+We have support for building both the GeoWave JAR artifacts and RPMs from Docker containers. This capability is useful for a number of different situations:
 
 * Jenkins build workers can run Docker on a variety of host-operating systems and build for others
 * Anyone running Docker will be able to duplicate our build and packaging environments

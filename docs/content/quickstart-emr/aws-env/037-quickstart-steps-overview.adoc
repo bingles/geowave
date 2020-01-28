@@ -16,5 +16,5 @@ image::interacting-cluster-1.png[scaledwidth="100%",alt="select emr"]
 The cluster status may show as waiting before the bootstrap script has completed. Please allow 5-7 minutes for the cluster to be setup and bootstrapped. This may take longer if you are using spot instances.  
 ====
 
-If you are using Accumulo as your data store, the script will automatically create a `geowave` user with a password (`geowave`) and table creation permissions, as well as pointing Accumulo to the GeoWave jar on HDFS.
+If you are using Accumulo as your data store, the script will automatically create a `geowave` user with a password (`geowave`) and table creation permissions, as well as pointing Accumulo to the GeoWave JAR on HDFS.
 

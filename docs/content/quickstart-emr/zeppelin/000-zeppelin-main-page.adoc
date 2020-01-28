@@ -62,7 +62,7 @@ To properly run and access GeoWave classes from the Zeppelin notebook we must co
 
 - Zeppelin Bootstrap: http://s3.amazonaws.com/geowave/${version_url}/scripts/emr/zeppelin/bootstrap-zeppelin.sh
 
-This bootstrap script will configure Zeppelin to access GeoWave classes, install the correct GeoWave jar file (more information in appendices), and setup other spark settings for Zeppelin. This script needs to be run as a bootstrap action when creating the EMR cluster.
+This bootstrap script will configure Zeppelin to access GeoWave classes, install the correct GeoWave JAR file (more information in appendices), and setup other spark settings for Zeppelin. This script needs to be run as a bootstrap action when creating the EMR cluster.
 
 [NOTE]
 ====
@@ -111,9 +111,9 @@ sudo stop zeppelin
 sudo start zeppelin
 ----
 
-== Update GeoWave Jar file
+== Update GeoWave JAR file
 
-Due to a bug with Zeppelin on EMR a different build of GeoWave using Accumulo 1.7.x must be used on the cluster if you intend to use Accumulo data stores. If you used the bootstrap script to setup the cluster for Zeppelin these steps are done automatically and you do not need to run the following steps in your cluster. If you want to package geowave locally and use that jar on your cluster follow the link:devguide.html#[developers guide, window="_blank"] and run the following steps.
+Due to a bug with Zeppelin on EMR a different build of GeoWave using Accumulo 1.7.x must be used on the cluster if you intend to use Accumulo data stores. If you used the bootstrap script to setup the cluster for Zeppelin these steps are done automatically and you do not need to run the following steps in your cluster. If you want to package geowave locally and use that JAR on your cluster follow the link:devguide.html#[developers guide, window="_blank"] and run the following steps.
 
 . Run the following command to package the source with Accumulo 1.7.x
 +
@@ -121,7 +121,7 @@ Due to a bug with Zeppelin on EMR a different build of GeoWave using Accumulo 1.
 ----
 mvn clean  package -DskipTests -Dfindbugs.skip -am -pl deploy -Pgeowave-tools-singlejar -Daccumulo.version=1.7.2 -Daccumulo.api=1.7
 ----
-. Upload the newly created snapshot tools jar file located in `deploy/target/` of your geowave source directory to a s3 bucket accessible by the cluster. 
+. Upload the newly created snapshot tools JAR file located in `deploy/target/` of your geowave source directory to a s3 bucket accessible by the cluster. 
 . SSH into the emr cluster
 . Run the following commands
 +
@@ -133,7 +133,7 @@ sudo mv /usr/local/geowave/tools/geowave-tools-0.9.7-apache.jar ~/backup/
 sudo mv ~/insert_jar_file_here
 ----
 
-Following these steps will allow you to maintain a backup jar, and update the jar used by Zeppelin. Simply restore the backup jar to the original location if you encounter errors after these steps. If you were running a Zeppelin notebook before running these steps you will need to restart the spark interpreter to update the jar file used by YARN.
+Following these steps will allow you to maintain a backup JAR, and update the JAR used by Zeppelin. Simply restore the backup JAR to the original location if you encounter errors after these steps. If you were running a Zeppelin notebook before running these steps you will need to restart the spark interpreter to update the JAR file used by YARN.
 
 
 === Github Zeppelin Notebook links

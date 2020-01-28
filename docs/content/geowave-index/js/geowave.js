@@ -13,23 +13,29 @@ $ (window).scroll (function () {
   fadeNavbar ($ (this));
 });
 
-// Page Preloader Animation
-// ==============================
-const preloader = document.querySelector ('.preloader');
+var documentationMenuItems = {
+  "GeoWave Overview": "overview.html",
+  "Installation Guide": "installation-guide.html",
+  "Quickstart Guide": "quickstart.html",
+  "EMR Quickstart Guide": "quickstart-emr.html",
+  "User Guide": "userguide.html",
+  "Developer Guide": "devguide.html",
+  "Command-Line Interface": "commands.html",
+  "sep1": null,
+  "Javadocs": "apidocs/index.html",
+  "Python Bindings": "pydocs/index.html"
+};
 
-if (preloader != null) {
-  const fadeEffect = setInterval (() => {
-    // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
-    if (!preloader.style.opacity) {
-      preloader.style.opacity = 1;
-    }
-    if (preloader.style.opacity > 0) {
-      preloader.style.opacity -= 0.1;
-    } else {
-      preloader.style.display = 'none';
-    }
-  }, 150);
-}
+var supportMenuItems = {
+  "GitHub Issues": "https://github.com/locationtech/geowave/issues",
+  "Gitter": "https://gitter.im/locationtech/geowave"
+};
+
+var githubMenuItems = {
+  "GeoWave Repository": "https://github.com/locationtech/geowave",
+  "Download Source (Zip)": "https://github.com/locationtech/geowave/zipball/master",
+  "Download Source (Tar)": "https://github.com/locationtech/geowave/tarball/master"
+};
 
 // Image Slider and Lightbox Combination
 // Swiper JS: https://swiperjs.com/
@@ -37,7 +43,7 @@ if (preloader != null) {
 // ==============================
 
 /* 1 of 2 : SWIPER */
-if (typeof Swiper !== 'undefined') {
+var initPhotoSwipe = function() {
   var mySwiper = new Swiper ('.swiper-container', {
     // If loop true set photoswipe - counterEl: false
     loop: true,
@@ -299,13 +305,12 @@ if (typeof Swiper !== 'undefined') {
   initPhotoSwipeFromDOM ('.my-gallery');
 }
 
-// Footer
-$ (document).ready (function () {
-  $ ('#footer').replaceWith ($ ('#geowave-footer'));
-});
 
-// Document Title
 $ (document).ready (function () {
+  // Replace Footer
+  $ ('#footer').replaceWith ($ ('#geowave-footer'));
+  
+  // Update Document Title
   var docTitle = $('#doc-title');
   if (docTitle !== null) {
     if (typeof doc_name !== 'undefined') {
@@ -315,4 +320,83 @@ $ (document).ready (function () {
       docTitle.remove();
     }
   }
+  
+  var populateMenu = function(menu, menuItems) {
+    if (menu !== null) {
+  	  for (var item in menuItems) {
+  	    if (menuItems[item] === null) {
+  	      menu.append('<hr class="my-1">');
+  	    } else {
+          menu.append('<a class="dropdown-item" href="' + menuItems[item] + '">' + item + '</a>');
+        }
+      }
+    }
+  }
+  
+  // Populate Menus
+  populateMenu($('#documentation-menu'), documentationMenuItems);
+  populateMenu($('#support-menu'), supportMenuItems);
+  populateMenu($('#github-menu'), githubMenuItems);
+  
+  // Populate Versions
+  var path = window.location.pathname;
+  var currentPage = "index.html";
+  if (path.endsWith(".html")) {
+    var currentPage = path.split("/").pop();
+  }
+  var currentVersion = $('#current-version');
+  var latest = true;
+  if (currentVersion !== null) {
+    currentVersion.text('Version ' + geowave_version);
+    if (geowave_version in versions) {
+      latest = false;
+    }
+  }
+  
+  var versionContents = function(name) {
+    if (name === null) {
+      if (latest) {
+      	return "<b>Latest Snapshot</b>";
+      } else {
+        return "Latest Snapshot";
+      }
+    } else if (!latest && name == geowave_version) {
+      return "<b>Version " + name + "</b>";
+    } else {
+      return "Version " + name;
+    }
+  }
+  
+  var versionMenu = $('#version-menu');
+  if (versionMenu !== null) {
+    versionMenu.append('<a class="dropdown-item" href="https://locationtech.github.io/geowave/latest/' + currentPage + '">' + versionContents(null) + '</a>');
+  	for (var version in versions) {
+      versionMenu.append('<a class="dropdown-item" href="' + versions[version].replace("%%page%%", currentPage) + '">' + versionContents(version) + '</a>');
+    }
+    versionMenu.append('<hr class="my-1">');
+    versionMenu.append('<a class="dropdown-item" href="packages.html">Packages</a>');
+  }
+  
+  // Init Swiper
+  if (typeof Swiper !== 'undefined') {
+    initPhotoSwipe();
+  }
+  
+  // Fade out preloader
+  var preloader = $('.preloader')[0];
+  if (preloader != null) {
+    var fadeEffect = setInterval (() => {
+      // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity > 0) {
+        preloader.style.opacity -= 0.1;
+      } else {
+        preloader.style.display = 'none';
+        clearInterval(fadeEffect);
+      }
+    }, 50);
+  }
 });
+

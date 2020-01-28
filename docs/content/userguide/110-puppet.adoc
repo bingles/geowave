@@ -9,7 +9,7 @@
 
 A GeoWave link:http://puppetlabs.com/[Puppet module^, window="_blank"] has been provided as part of both the tar.gz archive bundle and as an RPM. This module can be used to install the various GeoWave services onto separate nodes in a cluster or all onto a single node for development.
 
-There are a couple of different RPM repo settings that may need setting. As the repo is disabled by default to avoid picking up new Accumulo iterator jars without coordinating a service restart, there is likely some customization required for a particular use case. Class parameters are intended to be overridden to provide extensibility.
+There are a couple of different RPM repo settings that may need to be provided. As the repo is disabled by default to avoid picking up new Accumulo iterator JARs without coordinating a service restart, there is likely some customization required for a particular use case. Class parameters are intended to be overridden to provide extensibility.
 
 [[puppet-options]]
 ==== Options

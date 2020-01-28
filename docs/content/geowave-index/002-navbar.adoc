@@ -20,48 +20,25 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Documentation</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="#">Installation Guide</a>
-              <a class="dropdown-item" href="quickstart.html">Quickstart</a>
-              <a class="dropdown-item" href="userguide.html">User Guide</a>
-              <a class="dropdown-item" href="devguide.html">Developer Guide</a>
-              <a class="dropdown-item" href="commands.html">Command Line Interface</a>
-              <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
-              <a class="dropdown-item" href="pydocs/index.html">Python Bindings</a>
-              <a class="dropdown-item" href="#">Support</a>
+            <div id="documentation-menu" class="dropdown-menu" aria-labelledby="dropdown06">
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Support</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="https://github.com/locationtech/geowave/issues">GitHub Issues</a>
-              <a class="dropdown-item" href="#">Mailing list</a>
+            <div id="support-menu" class="dropdown-menu" aria-labelledby="dropdown06">
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="current-version" class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"></a>
+            <div id="version-menu" class="dropdown-menu" aria-labelledby="dropdown06">
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Version 1.0.0</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="#">Version 0.9.0</a>
-              <a class="dropdown-item" href="#">Version 0.8.0</a>
-              <a class="dropdown-item" href="#">Version 0.7.0</a>
-              <a class="dropdown-item" href="#">Version 0.6.0</a>
-              <a class="dropdown-item" href="#">Version 0.5.0</a>
-              <a class="dropdown-item" href="#">Version 0.4.0</a>
-              <a class="dropdown-item" href="#">Version 0.3.0</a>
-              <a class="dropdown-item" href="#">Previous Releases</a>
-              <hr class="my-1">
-              <a class="dropdown-item" href="#">Packages</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Github</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="#">Source</a>
-              <a class="dropdown-item" href="https://github.com/locationtech/geowave/zipball/master">Zip</a>
-              <a class="dropdown-item" href="https://github.com/locationtech/geowave/tarball/master">Tar</a>
+              aria-expanded="false">GitHub</a>
+            <div id="github-menu" class="dropdown-menu" aria-labelledby="dropdown06">
             </div>
           </li>
         </ul>

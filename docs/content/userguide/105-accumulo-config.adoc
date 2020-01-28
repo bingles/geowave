@@ -11,7 +11,7 @@ The two high level tasks to configure Accumulo for use with GeoWave are to:
 . Ensure the memory allocations for the master and tablet server processes are adequate.
 . Add the GeoWave libraries to the Accumulo classpath. The libraries are rather large, so ensure the Accumulo Master process has at least 512m of heap space and the Tablet Server processes have at least 1g of heap space.
 
-The recommended Accumulo configuration for GeoWave requires several manual configuration steps, but isolates the GeoWave libraries to application specific classpath(s). This reduces the possibility of dependency conflict issues. You should ensure that each namespace containing GeoWave tables is configured to pick up the GeoWave Accumulo jar on the classpath.
+The recommended Accumulo configuration for GeoWave requires several manual configuration steps, but isolates the GeoWave libraries to application specific classpath(s). This reduces the possibility of dependency conflict issues. You should ensure that each namespace containing GeoWave tables is configured to pick up the GeoWave Accumulo JAR on the classpath.
 
 [[accumulo-config-overview-procedure]]
 ===== Procedure
@@ -50,7 +50,7 @@ After installing a number of different iterators, you may want to figure out whi
 accumulo shell -u root -p ROOT_PWD -e "config -np" | grep -A 1 general.vfs.context.classpath
 ----
 
-You will get back a listing of context classpath override configurations that map the application or user context you configured to a specific iterator jar in HDFS.
+You will get back a listing of context classpath override configurations that map the application or user context you configured to a specific iterator JAR in HDFS.
 
 
 [[accumulo-config-versioning]]
@@ -76,12 +76,12 @@ geowave-${project.version}-apache-tools-${project.version}-201602012009.noarch
 [[accumulo-config-versioning-advanced]]
 ===== Advanced
 
-When GeoWave tables are first accessed on a tablet server, the vfs classpath tells Accumulo where to download the jar file from HDFS.
-The jar file is copied into the local /tmp directory (the default general.vfs.cache.dir setting) and loaded onto the classpath.
+When GeoWave tables are first accessed on a tablet server, the vfs classpath tells Accumulo where to download the JAR file from HDFS.
+The JAR file is copied into the local /tmp directory (the default general.vfs.cache.dir setting) and loaded onto the classpath.
 If there is ever doubt as to if these versions match, you can use the commands below from a tablet server node to verify the version of
 this artifact.
 
-.Commit hash of the jar in HDFS
+.Commit hash of the JAR in HDFS
 [source, bash]
 ----
 sudo -u hdfs hadoop fs -cat /accumulo/classpath/geowave/geowave-accumulo-build.properties | grep scm.revision | sed s/project.scm.revision=// <1>
@@ -107,5 +107,7 @@ sudo find /tmp -name "*geowave-accumulo.jar" -exec unzip -p {} build.properties 
 <1> This is the version loaded into hdfs and should be present on all tablet servers once Accumulo has been restarted.
 <2> The find command will probably locate a number of different versions depending on how often you clean out /tmp.
 
-There may be multiple versions copies present - one per JVM, the error scenario is when a tablet server is missing the correct iterator jar.
+There may be multiple versions copies present - one per JVM, the error scenario is when a tablet server is missing the correct iterator JAR.
+
+
 

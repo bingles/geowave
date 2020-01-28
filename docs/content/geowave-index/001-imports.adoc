@@ -3,6 +3,13 @@
 
 :linkattrs:
 
+[subs="attributes"]
+++++
+<script>
+var geowave_version = '${project.version}';
+</script>
+++++
+
 ++++
     <!-- Ion Icons -->
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">

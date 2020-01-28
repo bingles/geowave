@@ -115,6 +115,22 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>copy-docs-common-packages</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/content/packages/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/content/docs-common/</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
 						<id>copy-docs-common-userguide</id>
 						<phase>validate</phase>
 						<goals>
@@ -382,11 +398,13 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<target>
-								<fileset id="generate-index-file-packages" dir="${project.basedir}/content/packages" includes="*.adoc" />
+								<fileset id="generate-index-file-packages" dir="${project.build.directory}/content/packages" includes="*.adoc">
+								  <exclude name="**/packages.adoc" />
+								</fileset>
 								<!-- Abusing this a bit to do some simple templating, I have a file 
 									list and need a list of asciidoc includes that look like include::000-titlepage.adoc[] -->
 								<pathconvert pathsep="[]${line.separator}" property="asciidoc-files" refid="generate-index-file-packages">
-									<map from="${project.basedir}/content/packages/" to="include::" />
+									<map from="${project.build.directory}/content/packages/" to="include::" />
 								</pathconvert>
 								<echo file="${project.build.directory}/content/packages/packages.adoc">${asciidoc-files}[]</echo>
 							</target>

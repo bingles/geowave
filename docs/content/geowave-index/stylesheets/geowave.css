@@ -355,10 +355,11 @@ footer a:hover {
   height: 100vh;
   width: 100%;
   background: rgb(23, 22, 22);
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 2000;
   transition: opacity 0.3s linear;
   opacity: 1;
 }

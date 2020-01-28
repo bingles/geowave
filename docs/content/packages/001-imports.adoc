@@ -4,6 +4,7 @@
 :linkattrs:
 
 ++++
-    <link rel="stylesheet" type="text/css" href="stylesheets/geowave-bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/docs.css">
+    <script>
+      var doc_name = "Packages";
+    </script>
 ++++
