@@ -115,6 +115,10 @@ a.animated-link:hover:after {
   visibility: hidden;
 }
 
+.packages-content *[id]:before {
+  display: none;
+}
+
 /*  ----------- Hero ----------- */
 
 .hero {

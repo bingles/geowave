@@ -5,7 +5,7 @@
 
 ++++
 <!-- Start Main Content Container -->
-    <div class="container mt-5">
+    <div class="container mt-5 packages-content">
         <div class="row">
             <div class="col-12">
 
