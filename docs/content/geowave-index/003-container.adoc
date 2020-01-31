@@ -4,8 +4,10 @@
 :linkattrs:
 
 [subs="attributes"]
+
 ++++
-<!-- HEADER -->
+
+  <!-- HEADER -->
   <header class="hero bg-dark pt-5 text-center text-lg-left">
     <div class="container h-100 my-5 py-3">
       <div class="row h-100 align-items-center">
@@ -14,11 +16,20 @@
             Bringing scalability
             to geospatial
           </h1>
-          <p class="lead mb-5 text-white-50">
-            GeoWave is a software library that connects the scalability of distributed computing frameworks and key/value stores with modern geospatial software to store, retrieve and analyze massive geospatial datasets.
+          <p class="lead mb-5 text-white">
+            GeoWave is a software library that connects the scalability of distributed computing frameworks and
+            key/value stores with modern geospatial software to store, retrieve and analyze massive geospatial datasets.
           </p>
           <a class="btn btn-primary btn-labeled btn-lg rounded-pill" href="quickstart.html">Get
             started</a>
+          <div class="downloads mt-5">
+            <span class="d-block text-white mb-3">Ready to install Geowave?
+              <i class="icon ion-ios-arrow-round-down"></i>
+            </span>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_unix_1_1_0-SNAPSHOT.sh" class="p-2 mr-1" data-toggle="tooltip" data-placement="bottom" title="Linux"><img src="images/icon-linux.svg" alt="Linux Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_macos_1_1_0-SNAPSHOT.dmg" class="p-2 m-1" data-toggle="tooltip" data-placement="bottom" title="Mac"><img src="images/icon-apple.svg" alt="Apple Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_windows-x64_1_1_0-SNAPSHOT.exe" class="p-2 m-1" data-toggle="tooltip" data-placement="bottom" title="Windows"><img src="images/icon-windows.svg" alt="Windows Icon"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -32,81 +43,92 @@
         <hr class="title">
         <h2>Why GeoWave?</h2>
         <p class="card-text">
-          GeoWave is an open-source library to store, index, and search multi-dimensional data in sorted key/value stores. It includes implementations that support OGC spatial types (up to 3 dimensions), and both bounded and unbounded temporal values.  GeoWave’s geospatial support is built on top of the GeoTools project extensibility model. This means that it can integrate natively with any GeoTools-compatible project, such as GeoServer and UDig, and can ingest GeoTools compatible data sources.
+          GeoWave is an open-source library to store, index, and search multi-dimensional data in sorted key/value
+          stores. It includes implementations that support OGC spatial types (up to 3 dimensions), and both bounded and
+          unbounded temporal values. GeoWave’s geospatial support is built on top of the GeoTools project extensibility
+          model. This means that it can integrate natively with any GeoTools-compatible project, such as GeoServer and
+          UDig, and can ingest GeoTools compatible data sources.
         </p>
       </div>
     </div>
     <div class="row my-4">
       <div class="col-md-4 mb-5">
         <a href="overview.html#indices" class="card h-100 border-0 text-center">
-          <div class="card-body ">
+          <div class="card-body pb-1">
             <img src="images/icon-globe.svg" class="p-4" alt="Icon">
             <h4 class="card-title">Multi-dimensional Indexing</h4>
             <p class="card-text">
-              GeoWave adds multi-dimensional indexing to several key/value data stores, bringing with it support for geographic objects and geospatial operators for efficient querying with spatial and temporal constraints.
+              GeoWave adds multi-dimensional indexing to several key/value data stores, bringing with it support for
+              geographic objects and geospatial operators for efficient querying with spatial and temporal constraints.
             </p>
-            <i class="icon ion-ios-arrow-round-forward"></i>
           </div>
+          <div class="card-footer"><i class="icon ion-ios-arrow-round-forward"></i></div>
         </a>
       </div>
       <div class="col-md-4 mb-5">
         <a href="userguide.html#vector-queries" class="card h-100 border-0 text-center">
-          <div class="card-body ">
+          <div class="card-body pb-1">
             <img src="images/icon-search.svg" class="p-4" alt="Icon">
             <h4 class="card-title">Queries &amp; Aggregations</h4>
             <p class="card-text">
-              GeoWave efficiently performs spatial and spatial-temporal queries and aggregations by performing fine-grain filtering and processing server-side to reduce the amount of processing required by the client.
+              GeoWave efficiently performs spatial and spatial-temporal queries and aggregations by performing
+              fine-grain filtering and processing server-side to reduce the amount of processing required by the client.
             </p>
-            <i class="icon ion-ios-arrow-round-forward"></i>
           </div>
+          <div class="card-footer"><i class="icon ion-ios-arrow-round-forward"></i></div>
         </a>
       </div>
       <div class="col-md-4 mb-5">
         <a href="userguide.html#analytics" class="card h-100 border-0 text-center">
-          <div class="card-body ">
+          <div class="card-body pb-1">
             <img src="images/icon-analytics.svg" class="p-4" alt="Icon">
             <h4 class="card-title">Analytics</h4>
             <p class="card-text">
-              GeoWave includes several customizable analytic algorithms that operate on geospatial data.  It also provides Hadoop input and output formats and Spark RDDs to facilitate new analytic implementations.
+              GeoWave includes several customizable analytic algorithms that operate on geospatial data. It also
+              provides Hadoop input and output formats and Spark RDDs to facilitate new analytic implementations.
             </p>
-            <i class="icon ion-ios-arrow-round-forward"></i>
           </div>
+          <div class="card-footer"><i class="icon ion-ios-arrow-round-forward"></i></div>
         </a>
       </div>
       <div class="col-md-4 mb-5">
         <a href="overview.html#scalable" class="card h-100 border-0 text-center">
-          <div class="card-body ">
+          <div class="card-body pb-1">
             <img src="images/icon-scalable.svg" class="p-4" alt="Scalable Design">
             <h4 class="card-title">Scalable Design</h4>
             <p class="card-text">
-              GeoWave utilizes distributed computing clusters and server-side fine grain filtering to perform time and/or location specific queries on datasets containing billions of features with 100% accuracy.
+              GeoWave utilizes distributed computing clusters and server-side fine grain filtering to perform time
+              and/or location specific queries on datasets containing billions of features with 100% accuracy.
             </p>
-            <i class="icon ion-ios-arrow-round-forward"></i>
           </div>
+          <div class="card-footer"><i class="icon ion-ios-arrow-round-forward"></i></div>
         </a>
       </div>
       <div class="col-md-4 mb-5">
         <a href="overview.html#pluggable-backend" class="card h-100 border-0 text-center">
-          <div class="card-body ">
+          <div class="card-body pb-1">
             <img src="images/icon-plug-backend.svg" class="p-4" alt="Pluggable Backend Icon">
             <h4 class="card-title">Pluggable Backend</h4>
             <p class="card-text">
-              GeoWave is an indexing layer that can be added on top of any sorted key/value store.  All core logic is abstracted away from the backend implementation to make supporting new key/value stores as simple as possible.
+              GeoWave is an indexing layer that can be added on top of any sorted key/value store. All core logic is
+              abstracted away from the backend implementation to make supporting new key/value stores as simple as
+              possible.
             </p>
-            <i class="icon ion-ios-arrow-round-forward"></i>
           </div>
+          <div class="card-footer"><i class="icon ion-ios-arrow-round-forward"></i></div>
         </a>
       </div>
       <div class="col-md-4 mb-5">
         <a href="overview.html#modular-framework" class="card h-100 border-0 text-center">
-          <div class="card-body ">
+          <div class="card-body pb-1">
             <img src="images/icon-tetris.svg" class="p-4" alt="Modular Framework Icon">
             <h4 class="card-title">Modular Framework</h4>
             <p class="card-text">
-              The GeoWave architecture is designed to be extremely extensible with most of the functionality units defined by interfaces that enable easy feature extension and platform integration.
+              The GeoWave architecture is designed to be extremely extensible with most of the functionality units
+              defined by interfaces that enable easy feature extension and platform integration.
             </p>
-            <i class="icon ion-ios-arrow-round-forward"></i>
           </div>
+          <div class="card-footer"><i class="icon ion-ios-arrow-round-forward"></i></div>
         </a>
       </div>
       <a class="btn btn-primary btn-labeled btn-lg m-auto rounded-pill" href="overview.html">Learn More</a>
@@ -120,7 +142,9 @@
         <hr class="title">
         <h2 class="text-white">GeoWave in Action</h2>
         <p class="card-text text-white">
-          Take a look and see how GeoWave can be used on real data sets. You can also check out the <a href="overview.html#example-screenshots" target="_blank">GeoWave Overview</a> for more information about these and other examples.
+          Take a look and see how GeoWave can be used on real data sets. You can also check out the <a
+            href="overview.html#example-screenshots" target="_blank">GeoWave Overview</a> for more information about
+          these and other examples.
         </p>
       </div>
 
@@ -130,58 +154,53 @@
         <ul class="swiper-wrapper my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           <!-- Slides -->
           <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a title="click to zoom-in" href="images/geolife-density-13.jpg"
-              itemprop="contentUrl" data-size="1200x600">
-              <img src="images/geolife-density-13-thumb.jpg" itemprop="thumbnail"
-                alt="Image description" />
+            <a title="click to zoom-in" href="images/geolife-density-13.jpg" itemprop="contentUrl" data-size="1200x600">
+              <img src="images/geolife-density-13-thumb.jpg" itemprop="thumbnail" alt="Image description" />
             </a>
             <div class="text text-lg-left p-5">
               <h5>GeoLife at City Scale</h5>
-              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed on GeoLife GPS data.  The data was rendered at a Mapbox zoom level of 13.</p>
+              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed
+                on GeoLife GPS data. The data was rendered at a Mapbox zoom level of 13.</p>
             </div>
           </li>
           <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a title="click to zoom-in" href="images/geolife-density-17.jpg"
-              itemprop="contentUrl" data-size="1200x600">
-              <img src="images/geolife-density-17-thumb.jpg" itemprop="thumbnail"
-                alt="Image description" />
+            <a title="click to zoom-in" href="images/geolife-density-17.jpg" itemprop="contentUrl" data-size="1200x600">
+              <img src="images/geolife-density-17-thumb.jpg" itemprop="thumbnail" alt="Image description" />
             </a>
             <div class="text text-lg-left p-5">
               <h5>GeoLife at House Scale</h5>
-              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed on GeoLife GPS data.  The data was rendered at a Mapbox zoom level of 15.</p>
+              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed
+                on GeoLife GPS data. The data was rendered at a Mapbox zoom level of 15.</p>
             </div>
           </li>
           <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a title="click to zoom-in" href="images/osmgpx.jpg"
-              itemprop="contentUrl" data-size="1200x600">
-              <img src="images/osmgpx-thumb.jpg" itemprop="thumbnail"
-                alt="Image description" />
+            <a title="click to zoom-in" href="images/osmgpx.jpg" itemprop="contentUrl" data-size="1200x600">
+              <img src="images/osmgpx-thumb.jpg" itemprop="thumbnail" alt="Image description" />
             </a>
             <div class="text text-lg-left p-5">
               <h5>OpenStreetMap GPX at Continent Scale</h5>
-              <p>This image displays raw OpenStreetMap GPX data in a GeoWave data store.  The data was rendered at a Mapbox zoom level of 6.</p>
+              <p>This image displays raw OpenStreetMap GPX data in a GeoWave data store. The data was rendered at a
+                Mapbox zoom level of 6.</p>
             </div>
           </li>
           <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a title="click to zoom-in" href="images/osmgpx-world.jpg"
-              itemprop="contentUrl" data-size="1200x600">
-              <img src="images/osmgpx-world-thumb.jpg" itemprop="thumbnail"
-                alt="Image description" />
+            <a title="click to zoom-in" href="images/osmgpx-world.jpg" itemprop="contentUrl" data-size="1200x600">
+              <img src="images/osmgpx-world-thumb.jpg" itemprop="thumbnail" alt="Image description" />
             </a>
             <div class="text text-lg-left p-5">
               <h5>OpenStreetMap GPX at World Scale</h5>
-              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed OpenStreetMap GPX data.  The data was rendered at a Mapbox zoom level of 3.</p>
+              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed
+                OpenStreetMap GPX data. The data was rendered at a Mapbox zoom level of 3.</p>
             </div>
           </li>
           <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a title="click to zoom-in" href="images/t-drive-density-12.jpg"
-              itemprop="contentUrl" data-size="1200x600">
-              <img src="images/t-drive-density-12-thumb.jpg" itemprop=" thumbnail"
-                alt="Image description" />
+            <a title="click to zoom-in" href="images/t-drive-density-12.jpg" itemprop="contentUrl" data-size="1200x600">
+              <img src="images/t-drive-density-12-thumb.jpg" itemprop=" thumbnail" alt="Image description" />
             </a>
             <div class="text text-lg-left p-5">
               <h5>T-Drive at City Scale</h5>
-              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed on T-Drive GPS data.  The data was rendered at a Mapbox zoom level of 12.</p>
+              <p>This image displays the results of a GeoWave kernel density estimate (KDE) analytic that was performed
+                on T-Drive GPS data. The data was rendered at a Mapbox zoom level of 12.</p>
             </div>
           </li>
         </ul>
@@ -288,17 +307,23 @@
             <div class="col-auto mr-5">
               <h6 class="mb-4">Docs</h6>
               <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="overview.html">GeoWave Overview</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="installation-guide.html">Installation Guide</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="quickstart.html">Quickstart Guide</a> </li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="userguide.html">User Guide</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="devguide.html">Developer Guide</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="overview.html">GeoWave
+                    Overview</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a
+                    href="installation-guide.html">Installation Guide</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="quickstart.html">Quickstart
+                    Guide</a> </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="userguide.html">User Guide</a>
+                </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="devguide.html">Developer Guide</a>
+                </li>
               </ul>
             </div>
             <div class="col-auto">
               <h6 class="mb-4">More</h6>
               <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/locationtech/geowave">GitHub</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a
+                    href="https://github.com/locationtech/geowave">GitHub</a></li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">Gitter</a></li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">Packages</a></li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">Javadocs</a></li>
@@ -336,4 +361,3 @@
       </circle>
     </svg>
   </div>
-++++

@@ -16,6 +16,7 @@
 .navbar-docs {
     background-color: rgb(23, 33, 46) !important;
     padding: 0 1rem;
+    box-shadow: 0 0.15rem 1.5rem rgba(0, 0, 0, 0.7) !important;
 }
 
 .navbar-docs .navbar-brand {
@@ -62,8 +63,14 @@ body.toc2 {
 
 /* Typography Adjustments */
 
+#header, #content, #footnotes, #footer {
+    font-family: 'Lato', sans-serif;
+}
+
 h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
     color: #212529;
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
 }
 
 .subheader, .admonitionblock td.content>.title, .audioblock>.title, .exampleblock>.title, .imageblock>.title, .listingblock>.title, .literalblock>.title, .stemblock>.title, .openblock>.title, .paragraph>.title, .quoteblock>.title, table.tableblock>.title, .verseblock>.title, .videoblock>.title, .dlist>.title, .olist>.title, .ulist>.title, .qlist>.title, .hdlist>.title {
@@ -71,15 +78,15 @@ h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
 }
 
 h3, .h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 1rem;
+    font-size: 1.6rem;
 }
 
-h1#geowave-user-guide {
-    margin: 4rem 0 3rem;
-    font-size: 3.5rem;
-    font-weight: 700;
+h4 {
+    font-weight: 400;
+}
+
+#content h1 {
+    font-weight: 900;
 }
 
 .openblock.partintro {
@@ -90,13 +97,17 @@ h1#geowave-user-guide {
     border-bottom: 1px solid #efefed;
 }
 
+h1 strong, h2 strong, h3 strong, #toctitle strong, .sidebarblock>.content>.title strong, h4 strong, h5 strong, h6 strong {
+    font-weight: 500;
+}
+
 /* Table of Contents */
 
 #header .toc2 {
     background-color: #17212e;
     /* background-color: #f4f4f5 */
     max-width: 18em;
-    padding: 1.25em 1.5em;
+    padding: .75em 1.5em 66px;
     top: 66px;
 }
 
@@ -127,14 +138,14 @@ h1#geowave-user-guide {
 }
 
 .sectlevel1 li>a {
-    display: inline-block;
     color: white;
-    /* color: #212529; */
-    font-family: 'Livvic', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    opacity: 0.9;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.01rem;
     margin: 0.75rem 0;
+    opacity: 0.9;
+    text-transform: uppercase;
 }
 
 .sectlevel2 li a {
