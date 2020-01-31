@@ -22,3 +22,8 @@
 :store-redis: {blob-root}/extensions/datastores/redis/{source-root}
 :store-rocksdb: {blob-root}/extensions/datastores/rocksdb/{source-root}
 
+:icons: font
+:iconfont-remote!:
+:!webfonts:
+:highlightjsdir: vendors/highlightjs
+

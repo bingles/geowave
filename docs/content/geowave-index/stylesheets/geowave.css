@@ -392,12 +392,12 @@ footer a:hover {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: rgb(23, 22, 22);
+  background: white;
   position: fixed;
   overflow: hidden;
   top: 0;
   left: 0;
   z-index: 2000;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.1s linear;
   opacity: 1;
 }

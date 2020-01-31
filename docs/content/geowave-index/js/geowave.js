@@ -415,17 +415,12 @@ $ (document).ready (function () {
   // Fade out preloader
   var preloader = $ ('.preloader')[0];
   if (preloader != null) {
-    var fadeEffect = setInterval (() => {
-      // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
-      if (!preloader.style.opacity) {
-        preloader.style.opacity = 1;
-      }
-      if (preloader.style.opacity > 0) {
-        preloader.style.opacity -= 0.1;
-      } else {
+    setTimeout(() => {
+      preloader.style.opacity = 0;
+      var fadeEffect = setInterval (() => {
         preloader.style.display = 'none';
         clearInterval (fadeEffect);
-      }
-    }, 50);
+      }, 300);
+    }, 100);
   }
 });

@@ -1125,7 +1125,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1150,7 +1150,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1175,7 +1175,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1200,7 +1200,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1225,7 +1225,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1250,7 +1250,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<icons>font</icons>
 										<sectanchors>true</sectanchors>
@@ -1275,7 +1275,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1300,7 +1300,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1325,7 +1325,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1350,7 +1350,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
@@ -1375,7 +1375,7 @@
 									<backend>html5</backend>
 									<sourceHighlighter>highlightjs</sourceHighlighter>
 									<attributes>
-										<stylesdir>../geowave-index/stylesheets</stylesdir>
+										<stylesdir>stylesheets</stylesdir>
 										<imagesdir>./images</imagesdir>
 										<toc>right</toc>
 										<icons>font</icons>
