@@ -16,12 +16,20 @@
             Bringing scalability
             to geospatial
           </h1>
-          <p class="lead mb-5 text-white-50">
+          <p class="lead mb-5 text-white">
             GeoWave is a software library that connects the scalability of distributed computing frameworks and
             key/value stores with modern geospatial software to store, retrieve and analyze massive geospatial datasets.
           </p>
           <a class="btn btn-primary btn-labeled btn-lg rounded-pill" href="quickstart.html">Get
             started</a>
+          <div class="downloads mt-5">
+            <span class="d-block text-white mb-2">Ready to install Geowave?
+              <i class="icon ion-ios-arrow-round-down"></i>
+            </span>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_unix_1_1_0-SNAPSHOT.sh" class="pr-1"><img src="images/icon-linux.svg" class="pr-2" alt="Linux Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_macos_1_1_0-SNAPSHOT.dmg" class="p-1"><img src="images/icon-apple.svg" class="p-2" alt="Apple Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_windows-x64_1_1_0-SNAPSHOT.exe" class="p-1"><img src="images/icon-windows.svg" class="p-2" alt="Windows Icon"></a>
+          </div>
         </div>
       </div>
     </div>
