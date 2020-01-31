@@ -344,4 +344,4 @@
   </footer>
 
   <!-- Page Preloader -->
-  <div class="preloader" />
+  <div class="preloader"></div>
