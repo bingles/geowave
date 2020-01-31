@@ -45,3 +45,4 @@ include::manpages/ingest/geowave-sparkToGW.txt[]
 include::manpages/ingest/geowave-listplugins.txt[]
 
 '''
+

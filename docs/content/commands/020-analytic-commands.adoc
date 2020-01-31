@@ -61,3 +61,4 @@ include::manpages/analytic/geowave-sql.txt[]
 include::manpages/analytic/geowave-spatialjoin.txt[]
 
 '''
+

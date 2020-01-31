@@ -145,7 +145,7 @@ These options are available for RocksDB data stores.
 
 === GeoServer CLI Configuration
 
-GeoWave can be configured for a GeoServer connection through the `config geoserver` command.
+GeoWave can be configured for a GeoServer connection through the link:commands.html#config-geoserver[`config geoserver`] command.
 
 [source, bash]
 ----
@@ -209,7 +209,7 @@ Data written through WFS-T is indexed within a single index. When writing data, 
 
 ==== Authorization Management
 
-Authorization Management determines the set of authorizations to supply to GeoWave queries to be compared against the <<040-visibility-management.adoc#visibility-management, visibility expressions>> attached to GeoWave data.  The available Authorization Management strategies are registered through the Server Provider model, within the file `META-INF/services/org.locationtech.geowave.vector.auth.AuthorizationFactorySPI`.
+Authorization Management determines the set of authorizations to supply to GeoWave queries to be compared against the <<040-visibility-management.adoc#visibility-management, visibility expressions>> attached to GeoWave data.
 
 The provided implementations include the following:
 
@@ -227,4 +227,6 @@ The provided implementations include the following:
 ----
 
 In this example, the user `fred` has three authorization labels. The user `barney` has just one.
+
+NOTE: Additional authorization management strategies can be registered through the Java Service Provider Interface (SPI) model by implementing the {adapter-auth}/adapter/auth/AuthorizationFactorySPI.java[`AuthorizationFactorySPI`] interface. For more information on using SPI, see the link:https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html[Oracle documentation, window="_blank"].
 

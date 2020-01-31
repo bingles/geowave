@@ -11,3 +11,4 @@ Commands for use with the GeoWave Python bindings.
 include::manpages/util/python/geowave-python-rungateway.txt[]
 
 '''
+

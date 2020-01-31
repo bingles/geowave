@@ -158,3 +158,4 @@ include::manpages/geoserver/geowave-listws.txt[]
 include::manpages/geoserver/geowave-rmws.txt[]
 
 '''
+

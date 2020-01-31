@@ -7,22 +7,22 @@ The following examples show how to utilize the GeoWave API to accomplish common 
 
 === Creating Data Stores
 
-Data stores are created by instantiating a `StoreFactoryOptions` implementation for the data store type you want to create.  The following table lists the various options classes for each supported key/value store:
+Data stores are created by instantiating a {core-store}/core/store/StoreFactoryOptions.java[`StoreFactoryOptions`] implementation for the data store type you want to create.  The following table lists the various options classes for each supported key/value store:
 
-[options="header"]
+[options="header", cols="25%,75%"]
 |======================
-| Key/Value Store | Options Class |
-| Accumulo        | `org.locationtech.geowave.datastore.accumulo.config.AccumuloRequiredOptions` |
-| Bigtable        | `org.locationtech.geowave.datastore.bigtable.config.BigTableOptions` |
-| Cassandra       | `org.locationtech.geowave.datastore.cassandra.config.CassandraRequiredOptions` |
-| DynamoDB        | `org.locationtech.geowave.datastore.dynamodb.config.DynamoDBOptions` |
-| HBase           | `org.locationtech.geowave.datastore.hbase.config.HBaseRequiredOptions` |
-| Kudu            | `org.locationtech.geowave.datastore.kudu.config.KuduOptions` |
-| Redis           | `org.locationtech.geowave.datastore.redis.config.RedisOptions` |
-| RocksDB         | `org.locationtech.geowave.datastore.rocksdb.config.RocksDBOptions` |
+| Key/Value Store | Options Class
+| Accumulo        | {store-accumulo}/datastore/accumulo/config/AccumuloRequiredOptions.java[`org.locationtech.geowave.datastore.accumulo.config.AccumuloRequiredOptions`]
+| Bigtable        | {store-bigtable}/datastore/bigtable/config/BigTableOptions.java[`org.locationtech.geowave.datastore.bigtable.config.BigTableOptions`]
+| Cassandra       | {store-cassandra}/datastore/cassandra/config/CassandraRequiredOptions.java[`org.locationtech.geowave.datastore.cassandra.config.CassandraRequiredOptions`]
+| DynamoDB        | {store-dynamodb}/datastore/dynamodb/config/DynamoDBOptions.java[`org.locationtech.geowave.datastore.dynamodb.config.DynamoDBOptions`]
+| HBase           | {store-hbase}/datastore/hbase/config/HBaseRequiredOptions.java[`org.locationtech.geowave.datastore.hbase.config.HBaseRequiredOptions`]
+| Kudu            | {store-kudu}/datastore/kudu/config/KuduOptions.java[`org.locationtech.geowave.datastore.kudu.config.KuduOptions`]
+| Redis           | {store-redis}/datastore/redis/config/RedisOptions.java[`org.locationtech.geowave.datastore.redis.config.RedisOptions`]
+| RocksDB         | {store-rocksdb}/datastore/rocksdb/config/RocksDBOptions.java[`org.locationtech.geowave.datastore.rocksdb.config.RocksDBOptions`]
 |======================
 
-Once the options class has been initialized with all of the desired options, an instance of `DataStorePluginOptions` can be created.  This class serves as the gateway for accessing the various parts of a GeoWave data store, including the `DataStore` interface itself.  The following example shows how to create a RocksDB data store:
+Once the options class has been initialized with all of the desired options, an instance of {core-store}/core/store/cli/store/DataStorePluginOptions.java[`DataStorePluginOptions`] can be created.  This class serves as the gateway for accessing the various parts of a GeoWave data store, including the {core-store}/core/store/api/DataStore.java[`DataStore`] interface itself.  The following example shows how to create a RocksDB data store:
 
 [source, java]
 ----
@@ -36,7 +36,7 @@ DataStore myStore = pluginOptions.createDataStore();
 
 === Creating Indices
 
-Spatial and spatial-temporal indices are created by using the appropriate dimensionality type provider. For spatial indices, the `SpatialDimensionalityTypeProvider` can be used, and for spatial-temporal indices, the `SpatialTemporalDimensionalityTypeProvider` can be used. Each of these have their own set of options that can be configured using the `createOptions` function.  Once the options are created and set to the desired values, the `createIndex` function can be used to create the index.
+Spatial and spatial-temporal indices are created by using the appropriate dimensionality type provider. For spatial indices, the {core-geotime}/core/geotime/ingest/SpatialDimensionalityTypeProvider.java[`SpatialDimensionalityTypeProvider`] can be used, and for spatial-temporal indices, the {core-geotime}/core/geotime/ingest/SpatialTemporalDimensionalityTypeProvider.java[`SpatialTemporalDimensionalityTypeProvider`] can be used. Each of these have their own set of options that can be configured using the `createOptions` function.  Once the options are created and set to the desired values, the `createIndex` function can be used to create the index.
 
 [source, java]
 ----
@@ -53,7 +53,7 @@ stOpts.setCrs("EPSG:3857");
 Index spatialTemporalIndex = spatialTemporalTypeProvider.createIndex(stOpts);
 ----
 
-This index can then be added to the data store through the `IndexStore`.  The following example shows how to add these indices to the RocksDB data store created in the previous section:
+This index can then be added to the data store through the {core-store}/core/store/index/IndexStore.java[`IndexStore`].  The following example shows how to add these indices to the RocksDB data store created in the previous section:
 
 [source, java]
 ----
@@ -67,7 +67,7 @@ indexStore.addIndex(spatialTemporalIndex);
 
 ==== Index Plugins
 
-Indices can also be created using an index plugin.  To do this, create an instance of `IndexPluginOptions`, select a plugin, and then provide any plugin options that are expected by the plugin.  The following example shows how to use the index plugin to create a spatial index with a custom name:
+Indices can also be created using an index plugin.  To do this, create an instance of {core-store}/core/store/index/IndexPluginOptions.java[`IndexPluginOptions`], select a plugin, and then provide any plugin options that are expected by the plugin.  The following example shows how to use the index plugin to create a spatial index with a custom name:
 
 [source, java]
 ----
@@ -89,7 +89,7 @@ Index spatialIdx = options.createIndex();
 
 === Ingesting Data
 
-Data can be ingested into GeoWave by adding a type to a set of indices and then using the `Writer` interface to write data.  The following example creates a `FeatureDataAdapter` from a GeoTools SimpleFeatureType, adds it to the data store in the spatial index that was created in the previous section, and then uses the `Writer` to write some features:
+Data can be ingested into GeoWave by adding a type to a set of indices and then using the {core-store}/core/store/api/Writer.java[`Writer`] interface to write data.  The following example creates a {adapter-vector}/adapter/vector/FeatureDataAdapter.java[`FeatureDataAdapter`] from a GeoTools `SimpleFeatureType`, adds it to the data store in the spatial index that was created in the previous section, and then uses the {core-store}/core/store/api/Writer.java[`Writer`] to write some features:
 
 [source, java]
 ----
@@ -133,7 +133,7 @@ writer.close();
 
 === Querying Data
 
-Data in GeoWave can be queried by using the appropriate `QueryBuilder` implementation as described in the <<045-query#query-builders, query builder documentation>>.  The following is an example of using the `VectorQueryBuilder` to query feature data that lies within a specific bounding box:
+Data in GeoWave can be queried by using the appropriate {core-store}/core/store/api/QueryBuilder.java[`QueryBuilder`] implementation as described in the <<045-query#query-builders, query builder documentation>>.  The following is an example of using the {core-geotime}/core/geotime/store/query/api/VectorQueryBuilder.java[`VectorQueryBuilder`] to query feature data that lies within a specific bounding box:
 
 [source, java]
 ----
@@ -162,7 +162,7 @@ features.close();
 
 === Aggregating Data
 
-Aggregation queries can be performed by using an `AggregationQueryBuilder` as described in the <<045-query#query-builders, query builder documentation>>.  The following is an example of performing a count aggregation on a vector type in the data store for features that lie in a given bounding box:
+Aggregation queries can be performed by using an {core-store}/core/store/api/AggregationQueryBuilder.java[`AggregationQueryBuilder`] as described in the <<045-query#query-builders, query builder documentation>>.  The following is an example of performing a count aggregation on a vector type in the data store for features that lie in a given bounding box:
 
 [source, java]
 ----
@@ -182,11 +182,11 @@ AggregationQuery<Persistable, Object, SimpleFeature> aggregationQuery = aggregat
 Long count = (Long) myStore.aggregate(aggregationQuery);
 ----
 
-You can also create aggregations for any `Aggregation` implementation by using the `aggregate` function of the `AggregationQueryBuilder`.
+You can also create aggregations for any custom {core-store}/core/store/api/Aggregation.java[`Aggregation`] implementation by using the `aggregate` function of the {core-store}/core/store/api/AggregationQueryBuilder.java[`AggregationQueryBuilder`].
 
 === Querying Statistics
 
-Statistics queries can be performed by using an appropriate `StatisticsQueryBuilder`.  The following is an example of querying the bounding box statistic of a vector type in the data store:
+Statistics queries can be performed by using an appropriate {core-store}/core/store/api/StatisticsQueryBuilder.java[`StatisticsQueryBuilder`].  The following is an example of querying the bounding box statistic of a vector type in the data store:
 
 [source, java]
 ----

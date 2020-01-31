@@ -19,3 +19,4 @@ include::manpages/raster/geowave-resizespark.txt[]
 
 include::manpages/raster/geowave-installgdal.txt[]
 '''
+

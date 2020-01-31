@@ -66,7 +66,7 @@ Adding `help` before any CLI command will show that command's options and their 
 $ geowave help <command>
 ----
 
-For example, using the `help` command on `index add` would result in the following output:
+For example, using the `help` command on link:commands.html#index-add[`index add`] would result in the following output:
 
 ....
 $ geowave help index add
@@ -121,7 +121,7 @@ Specified:
 test-store spatial-idx
 ....
 
-The output is broken down into two sections.  The first section shows all of the options available on the `geowave` command.  If you wanted to use any of these options, they would need to be specified before `index add`.  The second section shows all of the options available on the `index add` command. Some commands contain options that, when specified, may reveal more options.  In this case, the `-t spatial` option has revealed some additional configuration options that we could apply to the spatial index.  Another command where this is useful is the `store add` command, where each data store type specified by the `-t <store_type>` option has a different set of configuration options.
+The output is broken down into two sections.  The first section shows all of the options available on the `geowave` command.  If you wanted to use any of these options, they would need to be specified before link:commands.html#index-add[`index add`].  The second section shows all of the options available on the link:commands.html#index-add[`index add`] command. Some commands contain options that, when specified, may reveal more options.  In this case, the `-t spatial` option has revealed some additional configuration options that we could apply to the spatial index.  Another command where this is useful is the link:commands.html#store-add[`store add`] command, where each data store type specified by the `-t <store_type>` option has a different set of configuration options.
 
 === Top-Level Commands
 
@@ -129,45 +129,45 @@ The GeoWave CLI is broken up into several top-level commands that each focus on 
 
 ==== Store Commands
 
-The `store` command contains commands for managing the GeoWave data stores.  This includes commands to add, remove, and copy data stores.
+The link:commands.html#store-commands[`store`] command contains commands for managing the GeoWave data stores.  This includes commands to add, remove, and copy data stores.
 
 ==== Index Commands
 
-The `index` command contains commands for listing, adding, and removing GeoWave indices from a data store.
+The link:commands.html#index-commands[`index`] command contains commands for listing, adding, and removing GeoWave indices from a data store.
 
 ==== Type Commands
 
-The `type` command contains commands for listing, describing, and removing types at a data store level.
+The link:commands.html#type-commands[`type`] command contains commands for listing, describing, and removing types at a data store level.
 
 ==== Ingest Commands
 
-The `ingest` command contains commands for ingesting data into a GeoWave data store.
+The link:commands.html#ingest-commands[`ingest`] command contains commands for ingesting data into a GeoWave data store.
 
 ==== Statistics Commands
 
-The `statistics` or `stat` command contains commands for listing, removing, or recalculating statistics.
+The link:commands.html#statistics-commands[`statistics`] or link:commands.html#statistics-commands[`stat`] command contains commands for listing, removing, or recalculating statistics.
 
 ==== Analytic Commands
 
-The `analytic` command contains commands for performing analytics on existing GeoWave datasets.  Results of analytic jobs consist of vector or raster data stored in GeoWave.
+The link:commands.html#analytic-commands[`analytic`] command contains commands for performing analytics on existing GeoWave datasets.  Results of analytic jobs consist of vector or raster data stored in GeoWave.
 
 ==== Vector Commands
 
-The `vector` command contains commands that are specific to vector data, this includes the vector query language and various export options.
+The link:commands.html#vector-commands[`vector`] command contains commands that are specific to vector data, this includes the vector query language and various export options.
 
 ==== Raster Commands
 
-The `raster` command contains commands that are specific to raster data, such as resize commands.
+The link:commands.html#raster-commands[`raster`] command contains commands that are specific to raster data, such as resize commands.
 
 ==== Config Commands
 
-The `config` command contains commands that affect the local GeoWave configuration. This includes commands to configure GeoServer, AWS, and HDFS.
+The link:commands.html#config-commands[`config`] command contains commands that affect the local GeoWave configuration. This includes commands to configure GeoServer, AWS, and HDFS.
 
 ==== GeoServer Commands
 
-The `geoserver` or `gs` command contains commands for managing GeoWave data on a GeoServer instance.  It includes several subcommands for managing workspaces, stores, layers, and styles.
+The link:commands.html#geoserver-commands[`geoserver`] or link:commands.html#geoserver-commands[`gs`] command contains commands for managing GeoWave data on a GeoServer instance.  It includes several subcommands for managing workspaces, stores, layers, and styles.
 
 ==== Util Commands
 
-The `util` command contains a lot of the miscellaneous operations that don't really warrant their own top-level command.  This includes commands to start standalone data stores and services.
+The link:commands.html#utility-commands[`util`] command contains a lot of the miscellaneous operations that don't really warrant their own top-level command.  This includes commands to start standalone data stores and services.
 

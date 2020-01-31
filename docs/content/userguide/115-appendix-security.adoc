@@ -23,7 +23,7 @@ In order to provide security around account passwords, particularly those entere
 
 [NOTE]
 ====
-Users can still continue to enter their password in plain text at command line (just as was done with previous versions of GeoWave), but it is strongly encouraged not to do so outside of a local development environment (i.e., NOT in a production environment or where concurrent users are sharing the same system).
+Users can still continue to enter their password in plain text at command-line (just as was done with previous versions of GeoWave), but it is strongly encouraged not to do so outside of a local development environment (i.e., NOT in a production environment or where concurrent users are sharing the same system).
 ====
 
 
@@ -43,7 +43,7 @@ This option is only useful to counter the event that only the token key file is 
 ====
 
 ===== Configuring Console Echo
-When the 'stdin' option is specified for passwords to be entered at command line, it is recognized that there are circumstances where the console echo is wanted to be enabled (i.e., someone looking over your shoulder), and other times where the console echo is wanted to be disabled.
+When the 'stdin' option is specified for passwords to be entered at command-line, it is recognized that there are circumstances where the console echo is wanted to be enabled (i.e., someone looking over your shoulder), and other times where the console echo is wanted to be disabled.
 
 For configuring the default console echo setting:
 [source, bash]

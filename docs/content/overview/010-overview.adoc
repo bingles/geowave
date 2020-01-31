@@ -6,7 +6,7 @@
 
 For many GeoWave users, the primary method of interfacing with GeoWave is through the various Command-Line Interface (CLI) commands.  Users will use GeoWave to store, index, or query multi-dimensional data in a key/value store.
 
-image::architecture_overview.png[scaledwidth="100%",width="100%",alt="Operational Overview", title="Operational Overview"]
+image::architecture_overview.svg[scaledwidth="100%",width="100%",alt="Operational Overview", title="Operational Overview"]
 
 Usage _typically_ involves these steps:
 [options="compact"]

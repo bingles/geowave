@@ -6,9 +6,11 @@
 
 More information on GeoWave, including the User and Developer Guides and further information on many of the commands run in these demos can be found below.
 
-link:userguide.html[**User Guide**, window="_blank"]
+link:overview.html[**GeoWave Overview**]
 
-link:devguide.html[**Developer Guide**, window="_blank"]
+link:userguide.html[**User Guide**]
 
-link:commands.html[**Command-Line Interface Documentation**, window="_blank"]
+link:devguide.html[**Developer Guide**]
+
+link:commands.html[**Command-Line Interface Documentation**]
 

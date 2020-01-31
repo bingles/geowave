@@ -18,3 +18,4 @@ include::manpages/util/osm/geowave-ingest.txt[]
 include::manpages/util/osm/geowave-stage.txt[]
 
 '''
+

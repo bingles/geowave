@@ -25,3 +25,4 @@ include::manpages/vector/geowave-localexport.txt[]
 include::manpages/vector/geowave-mrexport.txt[]
 
 '''
+

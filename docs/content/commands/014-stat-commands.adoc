@@ -30,3 +30,4 @@ include::manpages/stat/geowave-recalcstats.txt[]
 include::manpages/stat/geowave-rmstat.txt[]
 
 '''
+

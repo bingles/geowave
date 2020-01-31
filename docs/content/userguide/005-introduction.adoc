@@ -10,7 +10,7 @@ This user guide focuses on the various ways a user can interact with GeoWave wit
 
 === Assumptions
 
-This guide assumes that the reader is familiar with the basics of GeoWave discussed in the link:overview.html[Overview]. It also assumes that GeoWave has already been installed and is available on the command line.  See the link:installation-guide.html[Installation Guide^, window="_blank"] for help with the installation process.
+This guide assumes that the reader is familiar with the basics of GeoWave discussed in the link:overview.html[Overview]. It also assumes that GeoWave has already been installed and is available on the command-line.  See the link:installation-guide.html[Installation Guide^, window="_blank"] for help with the installation process.
 
 === External Components
 

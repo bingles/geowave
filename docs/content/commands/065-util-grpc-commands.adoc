@@ -16,3 +16,4 @@ include::manpages/util/grpc/geowave-grpc-start.txt[]
 include::manpages/util/grpc/geowave-grpc-stop.txt[]
 
 '''
+

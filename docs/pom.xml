@@ -647,6 +647,23 @@
 						</dependencies>
 						<executions>
 							<execution>
+								<id>generate-pdf-overview</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>process-asciidoc</goal>
+								</goals>
+								<configuration>
+									<sourceDirectory>${project.build.directory}/content/overview</sourceDirectory>
+									<sourceDocumentName>overview.adoc</sourceDocumentName>
+									<requires>
+										<require>asciidoctor-pdf</require>
+									</requires>
+									<backend>pdf</backend>
+									<compact>true</compact>
+									<sourceHighlighter>coderay</sourceHighlighter>
+								</configuration>
+							</execution>
+							<execution>
 								<id>generate-pdf-installation-guide</id>
 								<phase>generate-resources</phase>
 								<goals>
@@ -854,6 +871,19 @@
 							</dependency>
 						</dependencies>
 						<executions>
+							<execution>
+								<id>generate-epub-overview</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>process-asciidoc</goal>
+								</goals>
+								<configuration>
+									<sourceDirectory>${project.build.directory}/content/overview</sourceDirectory>
+									<sourceDocumentName>overview.adoc</sourceDocumentName>
+									<backend>epub3</backend>
+									<sourceHighlighter>coderay</sourceHighlighter>
+								</configuration>
+							</execution>
 							<execution>
 								<id>generate-epub-installation-guide</id>
 								<phase>generate-resources</phase>

@@ -6,7 +6,7 @@
 
 === Overview
 
-In order to facilitate querying GeoWave data from the CLI, a basic query language is available for vector data.  The idea behind the GeoWave Query Language is to provide a familiar way to easily query, filter, and aggregate vector data from a GeoWave data store.  The query language is similar to SQL, but currently only supports `SELECT` and `DELETE` statements.  These queries can be executed using the `vector query` command.
+In order to facilitate querying GeoWave data from the CLI, a basic query language is available for vector data.  The idea behind the GeoWave Query Language is to provide a familiar way to easily query, filter, and aggregate vector data from a GeoWave data store.  The query language is similar to SQL, but currently only supports `SELECT` and `DELETE` statements.  These queries can be executed using the link:commands.html#vector-query[`vector query`] command.
 
 ....
 $ geowave vector query "<query>"
@@ -164,7 +164,7 @@ DELETE FROM example.countries WHERE CQL(population<100000000)
 
 === Output Formats
 
-By default, the `vector query` command outputs all results to the console in a tabular format, however it is often desirable to feed the results of these queries into a format that is usable by other applications.  Because of this, the `vector query` command supports several output formats, each of which have their own options.  The output format can be changed by supplying the `-f` option on the query.
+By default, the link:commands.html#vector-query[`vector query`] command outputs all results to the console in a tabular format, however it is often desirable to feed the results of these queries into a format that is usable by other applications.  Because of this, the link:commands.html#vector-query[`vector query`] command supports several output formats, each of which have their own options.  The output format can be changed by supplying the `-f` option on the query.
 
 The following table shows the currently available output formats.
 

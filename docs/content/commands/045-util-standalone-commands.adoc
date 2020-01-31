@@ -40,3 +40,4 @@ include::manpages/util/kudu/geowave-runkudu.txt[]
 
 include::manpages/util/redis/geowave-runredis.txt[]
 '''
+

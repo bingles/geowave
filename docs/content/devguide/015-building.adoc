@@ -41,7 +41,7 @@ By default, integration tests are not run as part of the normal build process.  
 
 Integration tests are all written in the `geowave-tests` project and are run using a series of Maven profiles.  The following table shows the various profiles available along with a description of the tests that are run:
 
-[options="header"]
+[options="header", cols="25%,75%"]
 |======================
 | Maven Profile      | Description 
 | accumulo-it-client | Run integration tests on Accumulo with server-side libraries disabled

@@ -49,7 +49,7 @@ This command adds a spatial index to the `gdelt` data store with an index name o
 
 === Ingest Data
 
-GeoWave has many commands that facilitate ingesting data into a GeoWave data store.  For this example, we want to ingest GDELT data from the local file system, so we will use the `ingest localToGW` command.  We will use a bounding box that roughly surrounds Germany to limit the amount of data ingested for the example.
+GeoWave has many commands that facilitate ingesting data into a GeoWave data store.  For this example, we want to ingest GDELT data from the local file system, so we will use the link:commands.html#ingest-localToGW[`ingest localToGW`] command.  We will use a bounding box that roughly surrounds Germany to limit the amount of data ingested for the example.
 
 [source, bash]
 ----
@@ -182,7 +182,7 @@ This command tells GeoWave to perform a Kernel Density Estimation on the `gdelte
 
 === Visualizing the Data
 
-Now that we have prepared our vector and KDE data, we can visualize it by using the GeoServer plugin.  GeoWave provides an embedded GeoServer with the command line tools.
+Now that we have prepared our vector and KDE data, we can visualize it by using the GeoServer plugin.  GeoWave provides an embedded GeoServer with the command-line tools.
 
 ==== Configure GeoServer
 

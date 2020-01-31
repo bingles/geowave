@@ -10,13 +10,24 @@ There is a public link:packages.html[GeoWave RPM Repo, window="_blank"] availabl
 
 === Examples
 
+Many GeoWave artifacts are annotated with a `$VENDOR` as well as a `$VERSION`.  This is because some distribution vendors have different dependency requirements.  The artifact that should be downloaded is dependent on which distribution vendor is being used. Currently supported distribution vendors through GeoWave include:
+
+[ width="50%" cols="25%,75%", options="header"]
+|============
+| Distribution Vendor | Vendor Abbreviation
+| Apache              | `apache`
+| Apache - Accumulo 1.7 | `apache-accumulo1.7`
+| Cloudera            | `cdh5`
+| Hortonworks         | `hdp2`
+|============
+
 Use the GeoWave repo RPM to configure a host and search for GeoWave RPMs to install.
 
 [NOTE]
 ====
 Several of the RPMs (`accumulo`, `hbase`, `jetty`, `single-host`, and `tools`) are both GeoWave version and vendor version specific. In the examples below the `$VERSION` and `$VENDOR` tokens in the RPM name should be replaced with appropriate values.  For example, `geowave-$VERSION-$VENDOR-accumulo` might become `geowave-${project.version}-hdp2-accumulo`.
 
-* $VERSION: Version of the GeoWaveSource, e.g., ${project.version}
+* $VERSION: Version of the GeoWave source, e.g., ${project.version}
 * $VENDOR: Distribution vendor abbreviation - from the vendors table below, e.g., apache, cdh5, hdp2.
 
 Note that only `accumulo`, `hbase`, `jetty`, `tools`, and `single-host` require a vendor tag, all others only require the version.
@@ -28,6 +39,7 @@ Currently supported distribution vendors through GeoWave include:
 |============
 | Distribution Vendor | Vendor Abbreviation
 | Apache              | `apache`
+| Apache - Accumulo 1.7 | `apache-accumulo1.7`
 | Cloudera            | `cdh5`
 | Hortonworks         | `hdp2`
 |============
@@ -54,7 +66,7 @@ GeoWave RPMs
 | geowave-$VERSION-$VENDOR-hbase       | HBase Components
 | geowave-$VERSION-core                | Core (home directory and geowave user)
 | geowave-$VERSION-docs                | Documentation (HTML, PDF and man pages)
-| geowave-$VERSION-$VENDOR-tools       | Command Line Tools (ingest, etc.)
+| geowave-$VERSION-$VENDOR-tools       | Command-Line Tools (ingest, etc.)
 | geowave-$VERSION-$VENDOR-gwtomcat    | GeoServer components installed into /usr/local/geowave/geoserver and available at, e.g., http://localhost:8080/geoserver/web
 | geowave-$VERSION-puppet              | Puppet Scripts
 | geowave-$VERSION-$VENDOR-single-host | All GeoWave components installed on a single host (sometimes useful for development)
