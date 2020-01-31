@@ -77,17 +77,18 @@ a.animated-link:hover:after {
   color: #3200fa;
 }
 
+.navbar-dark .navbar-toggler {
+  border: 0;
+  z-index: 51;
+}
+
 @media (min-width: 768px) {
-  .navbar-expand-md .navbar-nav .nav-link {
+  .navbar-expand-lg .navbar-nav .nav-link {
     padding: .5rem 1.4rem;
   }
 }
 
-@media (max-width: 767px) {
-  .navbar-dark .navbar-toggler {
-    border: 0;
-    z-index: 51;
-  }
+@media (max-width: 991px) {
   .navbar-dark .navbar-toggler:hover {
     opacity: 0.75;
   }
