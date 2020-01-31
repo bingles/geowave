@@ -4,8 +4,10 @@
 :linkattrs:
 
 [subs="attributes"]
+
 ++++
-<!-- HEADER -->
+
+  <!-- HEADER -->
   <header class="hero bg-dark pt-5 text-center text-lg-left">
     <div class="container h-100 my-5 py-3">
       <div class="row h-100 align-items-center">
@@ -351,4 +353,3 @@
       </circle>
     </svg>
   </div>
-  ++++
