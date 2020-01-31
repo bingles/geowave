@@ -111,24 +111,21 @@ FeatureDataAdapter pointTypeAdapter = new FeatureDataAdapter(pointType);
 myStore.addType(pointTypeAdapter, spatialIndex);
 
 // Create a writer to ingest data
-Writer<SimpleFeature> writer = myStore.createWriter(pointTypeAdapter.getTypeName());
+try(Writer<SimpleFeature> writer = myStore.createWriter(pointTypeAdapter.getTypeName())) {
+  // Write some features to the data store
+  GeometryFactory factory = new GeometryFactory();
+  pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(1, 1)));
+  pointFeatureBuilder.set("date", new Date());
+  writer.write(pointFeatureBuilder.buildFeature("feature1"));
 
-// Write some features to the data store
-GeometryFactory factory = new GeometryFactory();
-pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(1, 1)));
-pointFeatureBuilder.set("date", new Date());
-writer.write(pointFeatureBuilder.buildFeature("feature1"));
+  pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(5, 5)));
+  pointFeatureBuilder.set("date", new Date());
+  writer.write(pointFeatureBuilder.buildFeature("feature2"));
 
-pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(5, 5)));
-pointFeatureBuilder.set("date", new Date());
-writer.write(pointFeatureBuilder.buildFeature("feature2"));
-
-pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(-5, -5)));
-pointFeatureBuilder.set("date", new Date());
-writer.write(pointFeatureBuilder.buildFeature("feature3"));
-
-// Close the writer
-writer.close();
+  pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(-5, -5)));
+  pointFeatureBuilder.set("date", new Date());
+  writer.write(pointFeatureBuilder.buildFeature("feature3"));
+}
 ----
 
 === Querying Data
@@ -148,16 +145,13 @@ queryBuilder.constraints(constraintsFactory.cqlConstraints("BBOX(the_geom, -1, -
 Query<SimpleFeature> query = queryBuilder.build();
 
 // Execute the query
-CloseableIterator<SimpleFeature> features = myStore.query(query);
-
-// Iterate through the results
-while(features.hasNext()) {
-  SimpleFeature feature = features.next();
-  // Do something with the feature
+try (CloseableIterator<SimpleFeature> features = myStore.query(query)) {
+  // Iterate through the results
+  while(features.hasNext()) {
+    SimpleFeature feature = features.next();
+    // Do something with the feature
+  }
 }
-
-// Close the results iterator
-features.close();
 ----
 
 === Aggregating Data

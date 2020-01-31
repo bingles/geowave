@@ -170,24 +170,21 @@ public class GeoWaveDocumentationExamplesIT extends AbstractGeoWaveIT {
     myStore.addType(pointTypeAdapter, spatialIndex);
 
     // Create a writer to ingest data
-    Writer<SimpleFeature> writer = myStore.createWriter(pointTypeAdapter.getTypeName());
+    try (Writer<SimpleFeature> writer = myStore.createWriter(pointTypeAdapter.getTypeName())) {
+      // Write some features to the data store
+      GeometryFactory factory = new GeometryFactory();
+      pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(1, 1)));
+      pointFeatureBuilder.set("date", new Date());
+      writer.write(pointFeatureBuilder.buildFeature("feature1"));
 
-    // Write some features to the data store
-    GeometryFactory factory = new GeometryFactory();
-    pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(1, 1)));
-    pointFeatureBuilder.set("date", new Date());
-    writer.write(pointFeatureBuilder.buildFeature("feature1"));
+      pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(5, 5)));
+      pointFeatureBuilder.set("date", new Date());
+      writer.write(pointFeatureBuilder.buildFeature("feature2"));
 
-    pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(5, 5)));
-    pointFeatureBuilder.set("date", new Date());
-    writer.write(pointFeatureBuilder.buildFeature("feature2"));
-
-    pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(-5, -5)));
-    pointFeatureBuilder.set("date", new Date());
-    writer.write(pointFeatureBuilder.buildFeature("feature3"));
-
-    // Close the writer
-    writer.close();
+      pointFeatureBuilder.set("the_geom", factory.createPoint(new Coordinate(-5, -5)));
+      pointFeatureBuilder.set("date", new Date());
+      writer.write(pointFeatureBuilder.buildFeature("feature3"));
+    }
     // --------------------------------------------------------------------
 
     // --------------------------------------------------------------------
@@ -204,29 +201,25 @@ public class GeoWaveDocumentationExamplesIT extends AbstractGeoWaveIT {
     Query<SimpleFeature> query = queryBuilder.build();
 
     // Execute the query
-    CloseableIterator<SimpleFeature> features = myStore.query(query);
-
-    // Iterate through the results
-    while (features.hasNext()) {
-      SimpleFeature feature = features.next();
-      // Do something with the feature
+    try (CloseableIterator<SimpleFeature> features = myStore.query(query)) {
+      // Iterate through the results
+      while (features.hasNext()) {
+        SimpleFeature feature = features.next();
+        // Do something with the feature
+      }
     }
-
-    // Close the results iterator
-    features.close();
     // --------------------------------------------------------------------
     // Verify example
-    features = myStore.query(queryBuilder.build());
-
-    // Iterate through the results
-    int featureCount = 0;
-    while (features.hasNext()) {
-      features.next();
-      featureCount++;
+    try (CloseableIterator<SimpleFeature> features = myStore.query(queryBuilder.build())) {
+      // Iterate through the results
+      int featureCount = 0;
+      while (features.hasNext()) {
+        features.next();
+        featureCount++;
+        // Do something with the feature
+      }
+      Assert.assertEquals(2, featureCount);
     }
-
-    Assert.assertEquals(2, featureCount);
-    features.close();
 
     // --------------------------------------------------------------------
     // Aggregation Example !! See Note at Top of Test
