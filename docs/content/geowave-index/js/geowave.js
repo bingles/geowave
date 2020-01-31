@@ -43,6 +43,11 @@ var githubMenuItems = {
   'Download Source (Tar)': 'https://github.com/locationtech/geowave/tarball/master',
 };
 
+// Initialize BS4 tooltips
+$ (function () {
+  $ ('[data-toggle="tooltip"]').tooltip ();
+});
+
 // Image Slider and Lightbox Combination
 // Swiper JS: https://swiperjs.com/
 // PhotoSwipe: https://photoswipe.com/

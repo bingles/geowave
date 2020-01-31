@@ -23,12 +23,12 @@
           <a class="btn btn-primary btn-labeled btn-lg rounded-pill" href="quickstart.html">Get
             started</a>
           <div class="downloads mt-5">
-            <span class="d-block text-white mb-2">Ready to install Geowave?
+            <span class="d-block text-white mb-3">Ready to install Geowave?
               <i class="icon ion-ios-arrow-round-down"></i>
             </span>
-            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_unix_1_1_0-SNAPSHOT.sh" class="pr-1"><img src="images/icon-linux.svg" class="pr-2" alt="Linux Icon"></a>
-            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_macos_1_1_0-SNAPSHOT.dmg" class="p-1"><img src="images/icon-apple.svg" class="p-2" alt="Apple Icon"></a>
-            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_windows-x64_1_1_0-SNAPSHOT.exe" class="p-1"><img src="images/icon-windows.svg" class="p-2" alt="Windows Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_unix_1_1_0-SNAPSHOT.sh" class="p-2 mr-1" data-toggle="tooltip" data-placement="bottom" title="Linux"><img src="images/icon-linux.svg" alt="Linux Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_macos_1_1_0-SNAPSHOT.dmg" class="p-2 m-1" data-toggle="tooltip" data-placement="bottom" title="Mac"><img src="images/icon-apple.svg" alt="Apple Icon"></a>
+            <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_windows-x64_1_1_0-SNAPSHOT.exe" class="p-2 m-1" data-toggle="tooltip" data-placement="bottom" title="Windows"><img src="images/icon-windows.svg" alt="Windows Icon"></a>
           </div>
         </div>
       </div>
