@@ -24,3 +24,9 @@ var geowave_version = '${project.version}';
     <!-- Custom styles for GeoWave -->
     <link href="stylesheets/geowave.css" rel="stylesheet" />
 ++++
+
+:icons: font
+:iconfont-remote!:
+:!webfonts:
+:highlightjsdir: vendors/highlightjs
+
