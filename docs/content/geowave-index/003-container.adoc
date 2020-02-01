@@ -11,7 +11,7 @@
   <header class="hero bg-dark pt-5 text-center text-lg-left">
     <div class="container h-100 my-5 py-3">
       <div class="row h-100 align-items-center">
-        <div class="col-lg-6 ">
+        <div class="col-lg-6">
           <h1 class="display-4 text-white mt-5 mb-4">
             Bringing scalability
             to geospatial
@@ -20,16 +20,18 @@
             GeoWave is a software library that connects the scalability of distributed computing frameworks and
             key/value stores with modern geospatial software to store, retrieve and analyze massive geospatial datasets.
           </p>
-          <a class="btn btn-primary btn-labeled btn-lg rounded-pill" href="quickstart.html">Get
-            started</a>
-          <div class="downloads mt-5">
-            <span class="d-block text-white mb-3">Ready to install Geowave?
-              <i class="icon ion-ios-arrow-round-down"></i>
-            </span>
+
+          <div class="downloads mb-5">
+            <span class="text-white mb-3">Install Geowave</span> <span class="text-primary pipe mx-2 pl-2"> | </span>
             <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_unix_1_1_0-SNAPSHOT.sh" class="p-2 mr-1" data-toggle="tooltip" data-placement="bottom" title="Linux"><img src="images/icon-linux.svg" alt="Linux Icon"></a>
             <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_macos_1_1_0-SNAPSHOT.dmg" class="p-2 m-1" data-toggle="tooltip" data-placement="bottom" title="Mac"><img src="images/icon-apple.svg" alt="Apple Icon"></a>
             <a href="https://geowave.s3.amazonaws.com/latest/standalone-installers/geowave_windows-x64_1_1_0-SNAPSHOT.exe" class="p-2 m-1" data-toggle="tooltip" data-placement="bottom" title="Windows"><img src="images/icon-windows.svg" alt="Windows Icon"></a>
           </div>
+          <a class="btn btn-primary btn-labeled btn-lg rounded-pill" href="quickstart.html">Get
+            started</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="images/hero.svg" class="hero-image">
         </div>
       </div>
     </div>

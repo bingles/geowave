@@ -123,24 +123,37 @@ a.animated-link:hover:after {
 /*  ----------- Hero ----------- */
 
 .hero {
-  background: rgb(24, 33, 46);
-  background: url("../images/hero-image2.png") no-repeat right -30px, linear-gradient(87deg, #1a2132 35%, rgba(38, 37, 80, 1) 100%);
-  background-size: contain;
+  background: linear-gradient(87deg, #1a2132 35%, rgba(38, 37, 80, 1) 100%);
+  /* background: url("../images/hero.svg") no-repeat right -30px;
+  background-size: contain; */
   overflow-x: hidden;
 }
 
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   .hero {
     background-position: -150px -80px;
     background-size: cover;
   }
-}
+} */
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .hero {
     background: linear-gradient(87deg, #1a2132 0%, rgba(38, 37, 80, 1) 100%);
     background-position: center;
     background-size: initial;
+  }
+} */
+
+.hero-image {
+  position: relative;
+  top: 2rem;
+  width: 100%;
+  margin-left: 4rem;
+}
+
+@media (max-width: 991px) {
+  .hero-image {
+    display: none;
   }
 }
 
@@ -159,15 +172,14 @@ a.animated-link:hover:after {
 
 .downloads>span {
   font-weight: 600;
-  position: relative;
 }
 
-.downloads>span .icon {
-  color: #7c5cff;
-  font-size: 35px;
-  margin-left: 10px;
-  position: absolute;
-  top: -14px;
+.downloads .pipe {
+  font-size: 27px;
+  font-weight: 200;
+  line-height: normal;
+  position: relative;
+  top: 1px;
 }
 
 .downloads>a img {
